@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#09090e">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="description" content="بوابة تنزيل ملف Redmi المشفّر برمز وصول خاص">
-<title>〽️Aiham | RK — المركز الخاص</title>
+<title>Aiham | RK〽️ — بوابة الوصول المشفّر</title>
 <style>
 :root{color-scheme:dark;--bg:#07080e;--card:#12131d;--edge:#45303f;--txt:#f7edf3;--muted:#a69aa6;--red:#fa3659;--red2:#941d3c;--gold:#f1bb8e;--success:#93e2bb}
 *{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100dvh;font-family:"Noto Sans Arabic","Tajawal",Tahoma,"Segoe UI",system-ui,sans-serif;color:var(--txt);background:var(--bg);overflow-x:hidden}
@@ -55,9 +55,8 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
 .bottom strong{color:#cba3b0}
 @media(max-width:390px){.portal{border-radius:17px}.top,.content{padding-left:17px;padding-right:17px}.sigil{height:145px}.ring.one{height:119px;width:119px}.ring.two{height:95px;width:95px}.hero{padding:0 14px 16px}.access{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-
 /* Aiham | RK workspace: public gate retains original styling */
-.brand-m{font-size:17px;letter-spacing:0;vertical-align:middle}.brand-bar{color:var(--red);margin:0 3px}
+.mark{font-size:13px;letter-spacing:.09em}.mark span{color:var(--red);margin:0 4px}
 .portal.unlocked{width:min(100%,850px)}.portal.unlocked .sigil,.portal.unlocked .hero,.portal.unlocked .rule,.portal.unlocked .gate-only{display:none}
 .portal.unlocked .top{padding-bottom:18px;border-bottom:1px solid #5b3041}
 .portal.unlocked .content{padding:22px 24px}
@@ -99,6 +98,16 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
 .workspace-foot{padding:20px 0 0;text-align:center;color:#cf9aaa;font-weight:900;font-size:12px}
 .workspace-foot span{font-weight:400;color:#8f8192}
 @media(max-width:580px){.portal.unlocked .content{padding:17px}.workspace-head{flex-wrap:wrap}.lock-center{margin-right:auto}.hub-tabs{gap:5px}.hub-tab{font-size:11px;padding:10px 2px}.workspace-panel{padding:16px}.module-header{flex-wrap:wrap;gap:10px}.file-tile{gap:10px}.file-icon{height:38px;width:38px}}
+
+.download-steps[hidden]{display:none}
+.download-steps{animation:rise .25s ease both;margin-top:14px}
+.steps-info{font-size:12px;line-height:1.8;color:#d3f5df;border:1px solid #376e58;background:#10281d;padding:11px;border-radius:10px;margin-bottom:15px}
+.step-box{border:1px solid #454050;border-radius:12px;background:#10131c;padding:13px;margin:12px 0}
+.step-label{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#f1e2e9;font-size:12px;font-weight:800;margin-bottom:10px}
+.step-label small{color:#a9a0b4;font-size:10px;font-weight:400}
+.step-number{display:grid;place-items:center;background:#70243f;color:#fff;border-radius:8px;width:24px;height:24px;flex-shrink:0;direction:ltr}
+.step-box .copy{margin-top:10px}
+.step-box .command{font-size:12px;line-height:1.75}
 </style>
 </head>
 <body>
@@ -106,26 +115,26 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
 <div class="shell">
   <main class="portal" id="portal">
     <header class="top">
-      <div class="mark"><span class="brand-m">〽️</span> Aiham <span class="brand-bar">|</span> RK</div>
-      <div class="status"><span class="lamp"></span>PRIVATE WORKSPACE</div>
+      <div class="mark">Aiham <span>|</span> RK〽️</div>
+      <div class="status"><span class="lamp"></span>PRIVATE DOWNLOAD</div>
     </header>
     <div class="sigil" aria-hidden="true">
       <div class="halo"></div><div class="ring one"></div><div class="ring two"></div>
       <div class="lock"><svg viewBox="0 0 32 32"><rect x="7" y="14" width="18" height="14" rx="3"/><path d="M11 14V9a5 5 0 0 1 10 0v5"/><path d="M16 20v3"/></svg></div>
     </div>
     <section class="hero">
-      <div class="kicker">PRIVATE / ENCRYPTED WORKSPACE</div>
-      <h1>بوابة 〽️Aiham | RK</h1>
-      <p class="intro">مساحتنا الخاصة للمشاريع والأفكار والأدوات. أدخل رمز الوصول للانتقال إلى المركز، مع الاحتفاظ بتنزيل إعداد Redmi تلقائيًا.</p>
+      <div class="kicker">Restricted / Encrypted Package</div>
+      <h1>بوابة الوصول المشفّر</h1>
+      <p class="intro">ملف إعداد Redmi محميّ بالتشفير. أدخل رمز الوصول الصحيح للانتقال إلى المركز وفتح ملفاتنا الخاصة.</p>
     </section>
     <div class="rule"></div>
     <section class="content">
-      <div class="gate-only" id="gate">
+      <div class="gate-only">
       <form id="f" autocomplete="off">
         <label class="label" for="pin">رمز الوصول الخاص</label>
         <div class="access-wrap"><input class="access" id="pin" type="text" autocapitalize="characters" inputmode="text" spellcheck="false" maxlength="34" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" required aria-describedby="hint"></div>
         <div class="hint" id="hint">الرمز مكوّن من 20 حرفًا ورقمًا. يمكن كتابته مع الشرطات أو بدونها.</div>
-        <button class="action" id="btn" type="submit"><span id="btn-label">دخول المركز الخاص</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 17 5-5-5-5"/><path d="M12 17h6"/></svg></button>
+        <button class="action" id="btn" type="submit"><span id="btn-label">فتح المركز الخاص</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 17 5-5-5-5"/><path d="M12 17h6"/></svg></button>
       </form>
       <div class="notice" id="status" role="status" aria-live="polite"></div>
       </div>
@@ -138,7 +147,7 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
           </div>
           <button class="lock-center" type="button" id="lock-center" title="إغلاق المركز والعودة لإدخال الرمز">قفل المركز <span aria-hidden="true">⌁</span></button>
         </div>
-        <div class="workspace-signal"><span class="signal-dot" aria-hidden="true"></span> تم التحقق من الرمز · هذه الجلسة مفتوحة على هذا المتصفح فقط</div>
+        <div class="workspace-signal"><span class="signal-dot" aria-hidden="true"></span> تم فتح المركز بنجاح · الجلسة غير محفوظة بعد إغلاق الصفحة</div>
         <div class="hub-tabs" role="tablist" aria-label="أقسام المركز">
           <button class="hub-tab selected" type="button" data-tab="files" role="tab" aria-selected="true" aria-controls="panel-files">ملفاتنا <span>01</span></button>
           <button class="hub-tab" type="button" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">المشاريع</button>
@@ -147,18 +156,29 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
         </div>
         <div class="workspace-panel" data-panel="files" id="panel-files" role="tabpanel">
           <div class="module-eyebrow">ACTIVE MODULE / 01</div>
-          <div class="module-header"><div><h3>إعداد الاتصال بـ Redmi</h3><p>ملف التثبيت المشفّر والأمر الخاص بتشغيله من داخل Termux.</p></div><span class="module-pill ready">متاح الآن</span></div>
+          <div class="module-header"><div><h3>إعداد الاتصال بـ Redmi</h3><p>اختر الملف لتنزيله، ثم ستظهر تعليمات Termux مع أزرار النسخ.</p></div><span class="module-pill ready">متاح الآن</span></div>
           <div class="file-tile">
             <div class="file-icon" aria-hidden="true">⌘</div>
             <div class="file-descr"><strong>Redmi_Remote_Setup.sh</strong><span>ملف إعداد SSH وTor · تنزيل مشفّر</span></div>
             <span class="file-check">✓</span>
           </div>
-          <div class="file-state">بعد إدخال الرمز الصحيح يبدأ تنزيل الملف تلقائيًا. وإذا لم يبدأ في متصفحك، استخدم زر إعادة التنزيل أدناه.</div>
-          <button class="workspace-download" id="again" type="button"><span aria-hidden="true">↓</span> إعادة تنزيل ملف Redmi</button>
-          <div class="command-title">أمر التنفيذ داخل Termux</div>
-          <code id="command" class="command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
-          <button class="copy" id="copy" type="button">نسخ أمر Termux</button>
-          <p class="file-note">احفظ الملف في مجلد Download على Redmi قبل تشغيل الأمر. التثبيت الفعلي على الجهاز البعيد لم يُختبر بعد.</p>
+          <div class="file-state">التنزيل اختياري ولن يبدأ عند إدخال الرمز. اضغط زر التنزيل عندما تحتاج الملف.</div>
+          <button class="workspace-download" id="download-file" type="button"><span aria-hidden="true">↓</span> تنزيل ملف Redmi</button>
+          <div id="download-steps" class="download-steps" hidden>
+            <div class="steps-info" role="status">بدأ تنزيل الملف. احفظه في مجلد <strong>Download</strong> على Redmi، ثم اتبع الخطوات التالية بالترتيب.</div>
+            <div class="step-box">
+              <div class="step-label"><span class="step-number">1</span> السماح لـ Termux بالوصول إلى التنزيلات <small>(مرة واحدة فقط إذا لم يكن مُفعّلًا)</small></div>
+              <code id="storage-command" class="command">termux-setup-storage</code>
+              <button class="copy" id="copy-storage" type="button">نسخ الأمر الأول</button>
+            </div>
+            <div class="step-box">
+              <div class="step-label"><span class="step-number">2</span> تشغيل ملف إعداد Redmi</div>
+              <code id="run-command" class="command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
+              <button class="copy" id="copy-run" type="button">نسخ الأمر الثاني</button>
+            </div>
+            <p class="file-note">وافق على إذن التخزين إن ظهر، ثم نفّذ الأمر الثاني. إذا غيّر المتصفح اسم الملف إلى <span dir="ltr">Redmi_Remote_Setup (1).sh</span> فأعد تسميته للاسم الظاهر أعلاه.</p>
+          </div>
+          <p class="file-note">يحتاج إعداد SSH إلى التنفيذ الفعلي على هاتف Redmi؛ لم يُختبر التثبيت على الجهاز البعيد بعد.</p>
         </div>
         <div class="workspace-panel" data-panel="projects" id="panel-projects" role="tabpanel" hidden>
           <div class="module-eyebrow">NEXT MODULE / PROJECTS</div>
@@ -184,26 +204,40 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
         <div class="workspace-foot">〽️ Aiham | RK <span>— نبني المركز خطوة بخطوة</span></div>
       </section>
     </section>
-    <footer class="bottom"><span>〽️ AIHAM | RK</span><strong>PRIVATE CREATIVE SPACE</strong></footer>
+    <footer class="bottom"><span>ENCRYPTED DELIVERY</span><strong>AUTHORIZED ACCESS ONLY</strong></footer>
   </main>
 </div>
 <script>
 const PAYLOAD={s:"wmYGCDSRuj9zUq5/QL1SYA==",v:"SoIPKSOiZv1Qmu2p",c:"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"};
 const el=id=>document.getElementById(id);
 const bytes=s=>Uint8Array.from(atob(s),x=>x.charCodeAt(0));
-const command="sh ~/storage/downloads/Redmi_Remote_Setup.sh";
+const storageCommand="termux-setup-storage";
+const runCommand="sh ~/storage/downloads/Redmi_Remote_Setup.sh";
 let downloaded=null;
-function downloadNow(){
+function downloadFile(){
  if(!downloaded)return;
  const url=URL.createObjectURL(downloaded);
- const a=document.createElement("a");
- a.href=url;a.download="Redmi_Remote_Setup.sh";
- document.body.append(a);a.click();a.remove();
+ const link=document.createElement("a");
+ link.href=url;
+ link.download="Redmi_Remote_Setup.sh";
+ document.body.append(link);
+ link.click();
+ link.remove();
  setTimeout(()=>URL.revokeObjectURL(url),15000);
+ el("download-steps").hidden=false;
+ el("download-file").textContent="↓ إعادة تنزيل ملف Redmi";
 }
 function message(text,kind){
  el("status").textContent=text;
  el("status").className="notice"+(kind?" "+kind:"");
+}
+function showPanel(tab){
+ document.querySelectorAll("[data-panel]").forEach(panel=>{panel.hidden=panel.dataset.panel!==tab});
+ document.querySelectorAll("[data-tab]").forEach(button=>{
+  const active=button.dataset.tab===tab;
+  button.classList.toggle("selected",active);
+  button.setAttribute("aria-selected",active?"true":"false");
+ });
 }
 el("f").addEventListener("submit",async e=>{
  e.preventDefault();
@@ -219,52 +253,47 @@ el("f").addEventListener("submit",async e=>{
   const file=await new Response(new Blob([plain]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
   downloaded=new Blob([file],{type:"application/octet-stream"});
   el("pin").value="";
-  downloadNow();
+  el("download-steps").hidden=true;
+  el("download-file").textContent="↓ تنزيل ملف Redmi";
   el("after").hidden=false;
   el("portal").classList.add("unlocked");
   showPanel("files");
-  message("تم فتح المركز وبدأ تنزيل الملف تلقائيًا.","ok");
-  el("portal").scrollIntoView({behavior:"auto",block:"start"});
+  message("");
+  window.scrollTo({top:0,behavior:"auto"});
  }catch(err){
   message(err.message==="browser"?"هذا المتصفح لا يدعم فك التشفير. افتح الرابط في Chrome.":"رمز الوصول غير صحيح. حاول مرة أخرى.","bad");
  }finally{
-  btn.disabled=false;el("btn-label").textContent="دخول المركز الخاص";
+  btn.disabled=false;el("btn-label").textContent="فتح المركز الخاص";
  }
 });
-
-function showPanel(tab){
- document.querySelectorAll("[data-panel]").forEach(panel=>{panel.hidden=panel.dataset.panel!==tab});
- document.querySelectorAll("[data-tab]").forEach(button=>{
-  const active=button.dataset.tab===tab;
-  button.classList.toggle("selected",active);
-  button.setAttribute("aria-selected",active?"true":"false");
- });
-}
 document.querySelectorAll("[data-tab]").forEach(button=>{
- button.addEventListener("click",()=>{if(!downloaded)return;showPanel(button.dataset.tab)});
+ button.addEventListener("click",()=>{if(downloaded)showPanel(button.dataset.tab)});
 });
+el("download-file").addEventListener("click",downloadFile);
 el("lock-center").addEventListener("click",()=>{
  downloaded=null;
+ el("download-steps").hidden=true;
  el("after").hidden=true;
  el("portal").classList.remove("unlocked");
  el("pin").value="";
  message("");
  window.scrollTo({top:0,behavior:"auto"});
 });
-el("again").addEventListener("click",downloadNow);
-el("copy").addEventListener("click",async()=>{
+async function copyCommand(value,button){
  let ok=false;
- try{await navigator.clipboard.writeText(command);ok=true}
+ try{await navigator.clipboard.writeText(value);ok=true}
  catch{
-   const temp=document.createElement("textarea");
-   temp.value=command;temp.style.position="fixed";temp.style.opacity="0";
-   document.body.appendChild(temp);temp.select();
-   try{ok=document.execCommand("copy")}catch{}
-   temp.remove();
+  const temp=document.createElement("textarea");
+  temp.value=value;temp.style.position="fixed";temp.style.opacity="0";
+  document.body.append(temp);temp.select();
+  try{ok=document.execCommand("copy")}catch{}
+  temp.remove();
  }
- const b=el("copy");b.textContent=ok?"تم نسخ الأمر ✓":"اضغط مطولًا على الأمر أعلاه لنسخه";
- if(ok)setTimeout(()=>b.textContent="نسخ الأمر إلى الحافظة",2500);
-});
+ button.textContent=ok?"تم النسخ ✓":"اضغط مطولًا على الأمر لنسخه";
+ if(ok)setTimeout(()=>{button.textContent=button.id==="copy-storage"?"نسخ الأمر الأول":"نسخ الأمر الثاني"},2200);
+}
+el("copy-storage").addEventListener("click",()=>copyCommand(storageCommand,el("copy-storage")));
+el("copy-run").addEventListener("click",()=>copyCommand(runCommand,el("copy-run")));
 </script>
 </body>
 </html>

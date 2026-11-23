@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#09090e">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="description" content="بوابة تنزيل ملف Redmi المشفّر برمز وصول خاص">
-<title>AURORA | بوابة الوصول المشفّر</title>
+<title>〽️Aiham | RK — المركز الخاص</title>
 <style>
 :root{color-scheme:dark;--bg:#07080e;--card:#12131d;--edge:#45303f;--txt:#f7edf3;--muted:#a69aa6;--red:#fa3659;--red2:#941d3c;--gold:#f1bb8e;--success:#93e2bb}
 *{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100dvh;font-family:"Noto Sans Arabic","Tajawal",Tahoma,"Segoe UI",system-ui,sans-serif;color:var(--txt);background:var(--bg);overflow-x:hidden}
@@ -55,44 +55,136 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
 .bottom strong{color:#cba3b0}
 @media(max-width:390px){.portal{border-radius:17px}.top,.content{padding-left:17px;padding-right:17px}.sigil{height:145px}.ring.one{height:119px;width:119px}.ring.two{height:95px;width:95px}.hero{padding:0 14px 16px}.access{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Aiham | RK workspace: public gate retains original styling */
+.brand-m{font-size:17px;letter-spacing:0;vertical-align:middle}.brand-bar{color:var(--red);margin:0 3px}
+.portal.unlocked{width:min(100%,850px)}.portal.unlocked .sigil,.portal.unlocked .hero,.portal.unlocked .rule,.portal.unlocked .gate-only{display:none}
+.portal.unlocked .top{padding-bottom:18px;border-bottom:1px solid #5b3041}
+.portal.unlocked .content{padding:22px 24px}
+.portal.unlocked .workspace.next{margin:0;border:0;background:none;padding:0;animation:rise .4s ease both}
+.workspace[hidden],.workspace-panel[hidden]{display:none!important}
+.workspace-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:7px 2px 18px}
+.workspace-head h2{font-size:clamp(23px,4vw,29px);margin:9px 0 5px;color:#fff;font-weight:900}
+.workspace-head p{font-size:13px;line-height:1.8;color:#ada3b2;margin:0;max-width:525px}
+.lock-center{white-space:nowrap;cursor:pointer;border:1px solid #5c3948;border-radius:10px;background:#201720;color:#ebc5d3;padding:10px 12px;font-size:12px;font-weight:800;transition:.2s}
+.lock-center:hover{background:#472334;color:#fff}
+.workspace-signal{color:#bde3cd;font-size:11px;padding:11px 13px;border:1px solid #2b5c49;border-radius:10px;background:#10241d;display:flex;align-items:center;gap:8px;line-height:1.7}
+.signal-dot{height:7px;width:7px;flex-shrink:0;background:#7beeaa;border-radius:50%;box-shadow:0 0 12px #7beeaa77}
+.hub-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:21px 0 13px}
+.hub-tab{display:flex;justify-content:center;align-items:center;gap:7px;min-height:46px;border:1px solid #3c3340;border-radius:11px;background:#14141e;color:#a99cab;padding:10px 5px;font-size:13px;font-weight:800;cursor:pointer;transition:.2s}
+.hub-tab:hover{border-color:#b44363;color:#ffe6ee}.hub-tab.selected{border-color:#b14664;background:linear-gradient(135deg,#532233,#281923);color:#fff;box-shadow:inset 0 1px #ff8fa31a}
+.hub-tab span{font-size:9px;color:#f7becf}
+.workspace-panel{min-height:285px;padding:23px;background:linear-gradient(138deg,#191923,#0d111a);border:1px solid #383442;border-radius:15px;animation:rise .3s ease}
+.module-eyebrow{color:#e9a5b6;letter-spacing:.14em;font:800 10px system-ui,sans-serif;direction:ltr;text-align:left}
+.module-header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin:10px 0 18px}
+.workspace-panel h3{font-size:20px;margin:0 0 7px;color:#fff}
+.workspace-panel p{color:#b4a6b5;line-height:1.85;font-size:13px;margin:0}
+.module-pill{display:inline-block;flex-shrink:0;align-self:flex-start;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800;line-height:1.4}
+.module-pill.ready{color:#b9f9d5;background:#1c372c;border:1px solid #447b60}
+.module-pill.future{color:#e6cbbb;background:#35261f;border:1px solid #6f483a;margin-top:18px}
+.file-tile{display:flex;align-items:center;gap:15px;padding:15px;background:#101721;border:1px solid #3e394c;border-radius:13px;direction:ltr;text-align:left}
+.file-icon{height:43px;width:43px;display:grid;place-items:center;border-radius:11px;background:#4b1c2e;color:#ffacc1;font-size:23px}
+.file-descr{display:flex;flex-direction:column;gap:4px;min-width:0}
+.file-descr strong{color:#f4eaf1;font:800 14px system-ui,sans-serif;overflow-wrap:anywhere}
+.file-descr span{font-size:11px;color:#b3aabb;direction:rtl;text-align:left}
+.file-check{margin-left:auto;color:#7fe7a7;font-weight:900;font-size:20px}
+.file-state{padding:10px 0 0;color:#c5b6c4;font-size:12px;line-height:1.8}
+.workspace-download{border:1px solid #a8425e;background:linear-gradient(125deg,#4c2031,#82243f);color:#fff;border-radius:10px;padding:12px 16px;font-size:13px;font-weight:800;margin:13px 0 19px;cursor:pointer}
+.workspace-download:hover{filter:brightness(1.15)}
+.command-title{font-size:13px;font-weight:800;color:#eac5d2;margin:2px 0 9px}
+.workspace-panel .command{font-size:12px}
+.workspace-panel .copy{cursor:pointer}
+.file-note{font-size:11px!important;color:#8e8795!important;margin-top:12px!important}
+.placeholder-symbol{font-size:48px;color:#e25079;margin:22px 0 13px;text-shadow:0 0 26px #d02e4c54;line-height:1}
+.workspace-foot{padding:20px 0 0;text-align:center;color:#cf9aaa;font-weight:900;font-size:12px}
+.workspace-foot span{font-weight:400;color:#8f8192}
+@media(max-width:580px){.portal.unlocked .content{padding:17px}.workspace-head{flex-wrap:wrap}.lock-center{margin-right:auto}.hub-tabs{gap:5px}.hub-tab{font-size:11px;padding:10px 2px}.workspace-panel{padding:16px}.module-header{flex-wrap:wrap;gap:10px}.file-tile{gap:10px}.file-icon{height:38px;width:38px}}
 </style>
 </head>
 <body>
 <div class="ambience" aria-hidden="true"></div>
 <div class="shell">
-  <main class="portal">
+  <main class="portal" id="portal">
     <header class="top">
-      <div class="mark">AURORA<span> / </span>ACCESS</div>
-      <div class="status"><span class="lamp"></span>PRIVATE DOWNLOAD</div>
+      <div class="mark"><span class="brand-m">〽️</span> Aiham <span class="brand-bar">|</span> RK</div>
+      <div class="status"><span class="lamp"></span>PRIVATE WORKSPACE</div>
     </header>
     <div class="sigil" aria-hidden="true">
       <div class="halo"></div><div class="ring one"></div><div class="ring two"></div>
       <div class="lock"><svg viewBox="0 0 32 32"><rect x="7" y="14" width="18" height="14" rx="3"/><path d="M11 14V9a5 5 0 0 1 10 0v5"/><path d="M16 20v3"/></svg></div>
     </div>
     <section class="hero">
-      <div class="kicker">Restricted / Encrypted Package</div>
-      <h1>بوابة الوصول المشفّر</h1>
-      <p class="intro">ملف إعداد Redmi محميّ بالتشفير. أدخل رمز الوصول الصحيح لبدء التنزيل تلقائيًا وإظهار أمر Termux.</p>
+      <div class="kicker">PRIVATE / ENCRYPTED WORKSPACE</div>
+      <h1>بوابة 〽️Aiham | RK</h1>
+      <p class="intro">مساحتنا الخاصة للمشاريع والأفكار والأدوات. أدخل رمز الوصول للانتقال إلى المركز، مع الاحتفاظ بتنزيل إعداد Redmi تلقائيًا.</p>
     </section>
     <div class="rule"></div>
     <section class="content">
+      <div class="gate-only" id="gate">
       <form id="f" autocomplete="off">
         <label class="label" for="pin">رمز الوصول الخاص</label>
         <div class="access-wrap"><input class="access" id="pin" type="text" autocapitalize="characters" inputmode="text" spellcheck="false" maxlength="34" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" required aria-describedby="hint"></div>
         <div class="hint" id="hint">الرمز مكوّن من 20 حرفًا ورقمًا. يمكن كتابته مع الشرطات أو بدونها.</div>
-        <button class="action" id="btn" type="submit"><span id="btn-label">فتح التشفير وبدء التنزيل</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 17 5-5-5-5"/><path d="M12 17h6"/></svg></button>
+        <button class="action" id="btn" type="submit"><span id="btn-label">دخول المركز الخاص</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 17 5-5-5-5"/><path d="M12 17h6"/></svg></button>
       </form>
       <div class="notice" id="status" role="status" aria-live="polite"></div>
-      <section class="next" id="after" hidden aria-live="polite">
-        <div class="step-mark">STEP 02 / TERMUX</div>
-        <h2>الملف جاهز للتشغيل</h2>
-        <p>بدأ التنزيل تلقائيًا. تأكد أن الملف موجود في مجلد Download على Redmi، ثم افتح Termux والصق الأمر:</p>
-        <code id="command" class="command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
-        <button class="copy" id="copy" type="button">نسخ الأمر إلى الحافظة</button>
-        <button class="again" id="again" type="button">إعادة تنزيل الملف</button>
+      </div>
+      <section class="next workspace" id="after" hidden aria-live="polite">
+        <div class="workspace-head">
+          <div>
+            <div class="step-mark">AIHAM | RK / PRIVATE HUB</div>
+            <h2>مرحبًا بك في مركزنا</h2>
+            <p>هنا نجمع مشاريعنا، أفكارنا، وملفاتنا في مساحة واحدة. الأقسام الجديدة مجهزة للتطوير لاحقًا.</p>
+          </div>
+          <button class="lock-center" type="button" id="lock-center" title="إغلاق المركز والعودة لإدخال الرمز">قفل المركز <span aria-hidden="true">⌁</span></button>
+        </div>
+        <div class="workspace-signal"><span class="signal-dot" aria-hidden="true"></span> تم التحقق من الرمز · هذه الجلسة مفتوحة على هذا المتصفح فقط</div>
+        <div class="hub-tabs" role="tablist" aria-label="أقسام المركز">
+          <button class="hub-tab selected" type="button" data-tab="files" role="tab" aria-selected="true" aria-controls="panel-files">ملفاتنا <span>01</span></button>
+          <button class="hub-tab" type="button" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">المشاريع</button>
+          <button class="hub-tab" type="button" data-tab="ideas" role="tab" aria-selected="false" aria-controls="panel-ideas">الأفكار</button>
+          <button class="hub-tab" type="button" data-tab="tools" role="tab" aria-selected="false" aria-controls="panel-tools">الأدوات</button>
+        </div>
+        <div class="workspace-panel" data-panel="files" id="panel-files" role="tabpanel">
+          <div class="module-eyebrow">ACTIVE MODULE / 01</div>
+          <div class="module-header"><div><h3>إعداد الاتصال بـ Redmi</h3><p>ملف التثبيت المشفّر والأمر الخاص بتشغيله من داخل Termux.</p></div><span class="module-pill ready">متاح الآن</span></div>
+          <div class="file-tile">
+            <div class="file-icon" aria-hidden="true">⌘</div>
+            <div class="file-descr"><strong>Redmi_Remote_Setup.sh</strong><span>ملف إعداد SSH وTor · تنزيل مشفّر</span></div>
+            <span class="file-check">✓</span>
+          </div>
+          <div class="file-state">بعد إدخال الرمز الصحيح يبدأ تنزيل الملف تلقائيًا. وإذا لم يبدأ في متصفحك، استخدم زر إعادة التنزيل أدناه.</div>
+          <button class="workspace-download" id="again" type="button"><span aria-hidden="true">↓</span> إعادة تنزيل ملف Redmi</button>
+          <div class="command-title">أمر التنفيذ داخل Termux</div>
+          <code id="command" class="command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
+          <button class="copy" id="copy" type="button">نسخ أمر Termux</button>
+          <p class="file-note">احفظ الملف في مجلد Download على Redmi قبل تشغيل الأمر. التثبيت الفعلي على الجهاز البعيد لم يُختبر بعد.</p>
+        </div>
+        <div class="workspace-panel" data-panel="projects" id="panel-projects" role="tabpanel" hidden>
+          <div class="module-eyebrow">NEXT MODULE / PROJECTS</div>
+          <div class="placeholder-symbol" aria-hidden="true">▦</div>
+          <h3>ركن المشاريع</h3>
+          <p>المساحة المخصصة لتنظيم مشاريع Aiham | RK ومتابعة تنفيذها وإصداراتها عندما نضيفها لاحقًا.</p>
+          <span class="module-pill future">قيد التجهيز — لا توجد مشاريع مضافة بعد</span>
+        </div>
+        <div class="workspace-panel" data-panel="ideas" id="panel-ideas" role="tabpanel" hidden>
+          <div class="module-eyebrow">NEXT MODULE / IDEAS LAB</div>
+          <div class="placeholder-symbol" aria-hidden="true">✧</div>
+          <h3>مختبر الأفكار</h3>
+          <p>سنخصص هذا القسم لجمع الأفكار وتحويلها إلى أعمال وخطط قابلة للتنفيذ.</p>
+          <span class="module-pill future">قيد التجهيز — لا يوجد حفظ للأفكار حاليًا</span>
+        </div>
+        <div class="workspace-panel" data-panel="tools" id="panel-tools" role="tabpanel" hidden>
+          <div class="module-eyebrow">NEXT MODULE / TOOLBOX</div>
+          <div class="placeholder-symbol" aria-hidden="true">⌘</div>
+          <h3>صندوق الأدوات</h3>
+          <p>مكان مخصص لإضافة الأدوات والملفات والاختصارات التي سنبنيها مستقبلًا.</p>
+          <span class="module-pill future">قيد التجهيز — الأدوات ستُضاف لاحقًا</span>
+        </div>
+        <div class="workspace-foot">〽️ Aiham | RK <span>— نبني المركز خطوة بخطوة</span></div>
       </section>
     </section>
-    <footer class="bottom"><span>ENCRYPTED DELIVERY</span><strong>AUTHORIZED ACCESS ONLY</strong></footer>
+    <footer class="bottom"><span>〽️ AIHAM | RK</span><strong>PRIVATE CREATIVE SPACE</strong></footer>
   </main>
 </div>
 <script>
@@ -129,13 +221,35 @@ el("f").addEventListener("submit",async e=>{
   el("pin").value="";
   downloadNow();
   el("after").hidden=false;
-  message("تم التحقق من الرمز بنجاح وبدأ تنزيل الملف تلقائيًا.","ok");
-  el("after").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"});
+  el("portal").classList.add("unlocked");
+  showPanel("files");
+  message("تم فتح المركز وبدأ تنزيل الملف تلقائيًا.","ok");
+  el("portal").scrollIntoView({behavior:"auto",block:"start"});
  }catch(err){
   message(err.message==="browser"?"هذا المتصفح لا يدعم فك التشفير. افتح الرابط في Chrome.":"رمز الوصول غير صحيح. حاول مرة أخرى.","bad");
  }finally{
-  btn.disabled=false;el("btn-label").textContent="فتح التشفير وبدء التنزيل";
+  btn.disabled=false;el("btn-label").textContent="دخول المركز الخاص";
  }
+});
+
+function showPanel(tab){
+ document.querySelectorAll("[data-panel]").forEach(panel=>{panel.hidden=panel.dataset.panel!==tab});
+ document.querySelectorAll("[data-tab]").forEach(button=>{
+  const active=button.dataset.tab===tab;
+  button.classList.toggle("selected",active);
+  button.setAttribute("aria-selected",active?"true":"false");
+ });
+}
+document.querySelectorAll("[data-tab]").forEach(button=>{
+ button.addEventListener("click",()=>{if(!downloaded)return;showPanel(button.dataset.tab)});
+});
+el("lock-center").addEventListener("click",()=>{
+ downloaded=null;
+ el("after").hidden=true;
+ el("portal").classList.remove("unlocked");
+ el("pin").value="";
+ message("");
+ window.scrollTo({top:0,behavior:"auto"});
 });
 el("again").addEventListener("click",downloadNow);
 el("copy").addEventListener("click",async()=>{

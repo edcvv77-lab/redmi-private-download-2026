@@ -108,6 +108,52 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
 .step-number{display:grid;place-items:center;background:#70243f;color:#fff;border-radius:8px;width:24px;height:24px;flex-shrink:0;direction:ltr}
 .step-box .copy{margin-top:10px}
 .step-box .command{font-size:12px;line-height:1.75}
+
+/* Compact files area: one file, one action, collapsible setup commands */
+.files-compact{min-height:0;padding:20px}
+.files-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px}
+.files-head h3{font-size:20px;margin:5px 0 3px}
+.files-head p{font-size:12px;color:#9f98a8;margin:0}
+.files-count{font-size:11px;font-weight:750;white-space:nowrap;border:1px solid #554252;background:#271d2b;color:#efc8d3;padding:6px 10px;border-radius:999px}
+.single-file{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#10141e;border:1px solid #453747;border-radius:13px;padding:13px}
+.single-file-info{display:flex;align-items:center;gap:11px;min-width:0;flex:1}
+.single-file-icon{height:43px;width:43px;flex:0 0 43px;display:grid;place-items:center;border:1px solid #71394e;border-radius:11px;background:linear-gradient(145deg,#54243a,#261923);color:#ffd5df;font-size:22px}
+.single-file-text{display:flex;flex-direction:column;gap:5px;min-width:0}
+.single-file-text strong{display:block;color:#f6edf2;font:750 12px/1.5 system-ui,sans-serif;white-space:normal;overflow-wrap:anywhere;text-align:left}
+.single-file-text small{font-size:11px;color:#a99eaf;line-height:1.5}
+.file-download-btn{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:7px;color:#fff;border:1px solid #bd5974;background:linear-gradient(130deg,#75243c,#b52a4f);border-radius:9px;padding:11px 12px;font-size:12px;font-weight:850;cursor:pointer;white-space:nowrap;transition:background .2s,transform .2s}
+.file-download-btn:active{transform:scale(.97)}.file-download-btn:hover{filter:brightness(1.12)}
+.file-download-btn>span:first-child{font-size:17px;line-height:12px}
+.download-feedback[hidden],.setup-accordion[hidden]{display:none!important}
+.download-feedback{display:flex;align-items:center;gap:9px;border:1px solid #2f6954;border-radius:10px;background:#10251d;color:#b2efd2;margin:12px 0 0;padding:10px 12px;font-size:12px;line-height:1.7}
+.download-feedback-icon{display:grid;place-items:center;flex:0 0 20px;height:20px;width:20px;border-radius:50%;background:#28694e;color:#fff}
+.setup-accordion{margin-top:12px;border:1px solid #534251;border-radius:12px;background:#12141d;overflow:hidden}
+.setup-accordion>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px}
+.setup-accordion>summary::-webkit-details-marker,.setup-help>summary::-webkit-details-marker{display:none}
+.accordion-head{display:flex;align-items:center;gap:10px;min-width:0}
+.accordion-icon{height:35px;width:35px;border:1px solid #5d4152;background:#261b2a;border-radius:10px;display:grid;place-items:center;color:#e3a6bd;font-size:19px;flex-shrink:0}
+.accordion-label{display:flex;flex-direction:column;gap:3px;min-width:0}
+.accordion-label strong{font-size:12px;color:#f9ebf0}
+.accordion-label small{font-size:10px;color:#988a9a}
+.accordion-chevron{font-size:22px;color:#f0b1c4;transition:transform .18s}
+.setup-accordion[open]>summary{border-bottom:1px solid #3c343f}
+.setup-accordion[open]>summary .accordion-chevron{transform:rotate(180deg)}
+.accordion-body{padding:13px 14px;border-top:1px solid #34303d}
+.compact-step+.compact-step{margin-top:13px;padding-top:12px;border-top:1px solid #34303d}
+.compact-step-title{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.compact-step-title>span{font:800 10px system-ui,sans-serif;color:#ffb8cb;background:#432135;padding:4px 6px;border-radius:6px}
+.compact-step-title strong{font-size:12px;color:#f5e6ed}
+.compact-step-title small{font-size:10px;color:#a399ac}
+.compact-command-row{display:flex;align-items:stretch;gap:8px;direction:ltr}
+.compact-code{background:#080c13;border:1px solid #3b3c4a;border-radius:8px;padding:11px;flex:1;min-width:0;color:#c5f4d8;font:11px/1.55 ui-monospace,Consolas,monospace;word-break:break-all;text-align:left;direction:ltr;user-select:all}
+.tiny-copy{border:1px solid #6e4657;border-radius:8px;background:#321d2a;color:#f3d6e0;padding:0 12px;font-size:11px;font-weight:800;cursor:pointer;flex:0 0 52px}
+.tiny-copy:hover{background:#51263a}
+.setup-help{margin-top:12px;padding:0;border-top:1px solid #34303d}
+.setup-help>summary{list-style:none;color:#a9a0af;font-size:11px;cursor:pointer;padding:12px 0 2px}
+.setup-help>summary:before{content:"＋";margin-left:6px;color:#ec9cb6}
+.setup-help[open]>summary:before{content:"−"}
+.setup-help p{font-size:11px;line-height:1.8;margin:8px 0 3px;color:#b7aebe}
+@media(max-width:440px){.files-compact{padding:14px}.single-file{gap:9px;padding:10px}.single-file-icon{height:37px;width:37px;flex-basis:37px}.single-file-text strong{font-size:11px}.single-file-text small{font-size:10px}.file-download-btn{padding:10px 9px;font-size:11px}.accordion-body{padding:11px}.tiny-copy{flex-basis:47px;padding:0 8px}}
 </style>
 </head>
 <body>
@@ -154,31 +200,63 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
           <button class="hub-tab" type="button" data-tab="ideas" role="tab" aria-selected="false" aria-controls="panel-ideas">الأفكار</button>
           <button class="hub-tab" type="button" data-tab="tools" role="tab" aria-selected="false" aria-controls="panel-tools">الأدوات</button>
         </div>
-        <div class="workspace-panel" data-panel="files" id="panel-files" role="tabpanel">
-          <div class="module-eyebrow">ACTIVE MODULE / 01</div>
-          <div class="module-header"><div><h3>إعداد الاتصال بـ Redmi</h3><p>اختر الملف لتنزيله، ثم ستظهر تعليمات Termux مع أزرار النسخ.</p></div><span class="module-pill ready">متاح الآن</span></div>
-          <div class="file-tile">
-            <div class="file-icon" aria-hidden="true">⌘</div>
-            <div class="file-descr"><strong>Redmi_Remote_Setup.sh</strong><span>ملف إعداد SSH وTor · تنزيل مشفّر</span></div>
-            <span class="file-check">✓</span>
-          </div>
-          <div class="file-state">التنزيل اختياري ولن يبدأ عند إدخال الرمز. اضغط زر التنزيل عندما تحتاج الملف.</div>
-          <button class="workspace-download" id="download-file" type="button"><span aria-hidden="true">↓</span> تنزيل ملف Redmi</button>
-          <div id="download-steps" class="download-steps" hidden>
-            <div class="steps-info" role="status">بدأ تنزيل الملف. احفظه في مجلد <strong>Download</strong> على Redmi، ثم اتبع الخطوات التالية بالترتيب.</div>
-            <div class="step-box">
-              <div class="step-label"><span class="step-number">1</span> السماح لـ Termux بالوصول إلى التنزيلات <small>(مرة واحدة فقط إذا لم يكن مُفعّلًا)</small></div>
-              <code id="storage-command" class="command">termux-setup-storage</code>
-              <button class="copy" id="copy-storage" type="button">نسخ الأمر الأول</button>
+        <div class="workspace-panel files-compact" data-panel="files" id="panel-files" role="tabpanel">
+          <div class="files-head">
+            <div>
+              <div class="module-eyebrow">PRIVATE LIBRARY / 01</div>
+              <h3>ملفاتنا</h3>
+              <p>ملفات وأدوات المركز، مرتبة في مكان واحد.</p>
             </div>
-            <div class="step-box">
-              <div class="step-label"><span class="step-number">2</span> تشغيل ملف إعداد Redmi</div>
-              <code id="run-command" class="command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
-              <button class="copy" id="copy-run" type="button">نسخ الأمر الثاني</button>
-            </div>
-            <p class="file-note">وافق على إذن التخزين إن ظهر، ثم نفّذ الأمر الثاني. إذا غيّر المتصفح اسم الملف إلى <span dir="ltr">Redmi_Remote_Setup (1).sh</span> فأعد تسميته للاسم الظاهر أعلاه.</p>
+            <span class="files-count">ملف واحد</span>
           </div>
-          <p class="file-note">يحتاج إعداد SSH إلى التنفيذ الفعلي على هاتف Redmi؛ لم يُختبر التثبيت على الجهاز البعيد بعد.</p>
+
+          <div class="single-file" aria-label="Redmi Remote Setup">
+            <div class="single-file-info">
+              <div class="single-file-icon" aria-hidden="true">⌘</div>
+              <div class="single-file-text">
+                <strong dir="ltr">Redmi_Remote_Setup.sh</strong>
+                <small>ملف إعداد Redmi · Shell Script</small>
+              </div>
+            </div>
+            <button class="file-download-btn" id="download-file" type="button" aria-label="تنزيل ملف إعداد Redmi">
+              <span aria-hidden="true">↓</span><span id="download-label">تنزيل</span>
+            </button>
+          </div>
+
+          <div class="download-feedback" id="download-feedback" role="status" hidden>
+            <span class="download-feedback-icon" aria-hidden="true">✓</span>
+            بدأ التنزيل. تأكد من حفظ الملف في مجلد Download.
+          </div>
+
+          <details id="download-steps" class="setup-accordion" hidden>
+            <summary>
+              <span class="accordion-head">
+                <span class="accordion-icon" aria-hidden="true">⌘</span>
+                <span class="accordion-label"><strong>خطوات التشغيل في Termux</strong><small>أمران فقط · الأول عند الحاجة</small></span>
+              </span>
+              <span class="accordion-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="accordion-body">
+              <div class="compact-step">
+                <div class="compact-step-title"><span>01</span><strong>تفعيل وصول التخزين</strong><small>عند الحاجة فقط</small></div>
+                <div class="compact-command-row">
+                  <code class="compact-code" id="storage-command">termux-setup-storage</code>
+                  <button type="button" id="copy-storage" class="tiny-copy" aria-label="نسخ أمر الوصول للتخزين">نسخ</button>
+                </div>
+              </div>
+              <div class="compact-step">
+                <div class="compact-step-title"><span>02</span><strong>تشغيل ملف Redmi</strong></div>
+                <div class="compact-command-row">
+                  <code class="compact-code" id="run-command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
+                  <button type="button" id="copy-run" class="tiny-copy" aria-label="نسخ أمر تشغيل ملف Redmi">نسخ</button>
+                </div>
+              </div>
+              <details class="setup-help">
+                <summary>لم تجد الملف في Termux؟</summary>
+                <p>تأكد من تنزيله داخل مجلد Download. وإذا تغيّر اسمه إلى <span dir="ltr">Redmi_Remote_Setup (1).sh</span>، أعد تسميته إلى <span dir="ltr">Redmi_Remote_Setup.sh</span>.</p>
+              </details>
+            </div>
+          </details>
         </div>
         <div class="workspace-panel" data-panel="projects" id="panel-projects" role="tabpanel" hidden>
           <div class="module-eyebrow">NEXT MODULE / PROJECTS</div>
@@ -225,7 +303,9 @@ function downloadFile(){
  link.remove();
  setTimeout(()=>URL.revokeObjectURL(url),15000);
  el("download-steps").hidden=false;
- el("download-file").textContent="↓ إعادة تنزيل ملف Redmi";
+ el("download-steps").open=true;
+ el("download-feedback").hidden=false;
+ el("download-label").textContent="إعادة التنزيل";
 }
 function message(text,kind){
  el("status").textContent=text;
@@ -254,7 +334,9 @@ el("f").addEventListener("submit",async e=>{
   downloaded=new Blob([file],{type:"application/octet-stream"});
   el("pin").value="";
   el("download-steps").hidden=true;
-  el("download-file").textContent="↓ تنزيل ملف Redmi";
+  el("download-steps").open=false;
+  el("download-feedback").hidden=true;
+  el("download-label").textContent="تنزيل";
   el("after").hidden=false;
   el("portal").classList.add("unlocked");
   showPanel("files");
@@ -273,6 +355,9 @@ el("download-file").addEventListener("click",downloadFile);
 el("lock-center").addEventListener("click",()=>{
  downloaded=null;
  el("download-steps").hidden=true;
+ el("download-steps").open=false;
+ el("download-feedback").hidden=true;
+ el("download-label").textContent="تنزيل";
  el("after").hidden=true;
  el("portal").classList.remove("unlocked");
  el("pin").value="";
@@ -290,7 +375,7 @@ async function copyCommand(value,button){
   temp.remove();
  }
  button.textContent=ok?"تم النسخ ✓":"اضغط مطولًا على الأمر لنسخه";
- if(ok)setTimeout(()=>{button.textContent=button.id==="copy-storage"?"نسخ الأمر الأول":"نسخ الأمر الثاني"},2200);
+ if(ok)setTimeout(()=>{button.textContent="نسخ"},2200);
 }
 el("copy-storage").addEventListener("click",()=>copyCommand(storageCommand,el("copy-storage")));
 el("copy-run").addEventListener("click",()=>copyCommand(runCommand,el("copy-run")));

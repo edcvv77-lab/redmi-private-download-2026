@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09090e">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="بوابة تنزيل ملف Redmi المشفّر برمز وصول خاص">
+<title>Aiham | RK〽️ — بوابة الوصول المشفّر</title>
+<style>
+:root{color-scheme:dark;--bg:#07080e;--card:#12131d;--edge:#45303f;--txt:#f7edf3;--muted:#a69aa6;--red:#fa3659;--red2:#941d3c;--gold:#f1bb8e;--success:#93e2bb}
+*{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100dvh;font-family:"Noto Sans Arabic","Tajawal",Tahoma,"Segoe UI",system-ui,sans-serif;color:var(--txt);background:var(--bg);overflow-x:hidden}
+.ambience{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0;background:radial-gradient(ellipse 67% 38% at 50% 10%,#54142672,transparent 75%),radial-gradient(ellipse 70% 40% at 90% 90%,#260d2260,transparent),linear-gradient(160deg,#08080d,#0a0b13 65%,#130d16)}
+.ambience:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#e85e7722 1px,transparent 1px),linear-gradient(90deg,#e85e7722 1px,transparent 1px);background-size:46px 46px;opacity:.12;mask-image:linear-gradient(transparent 0%,#000 25%,#000 80%,transparent)}
+.ambience:after{content:"";position:absolute;left:-15%;width:130%;top:-60%;height:50%;background:linear-gradient(transparent,#f338511c,transparent);transform:skewY(-12deg);animation:scan 10s linear infinite}
+@keyframes scan{0%{top:-70%}100%{top:140%}}
+@keyframes breathe{0%,100%{filter:drop-shadow(0 0 12px #e6274b44)}50%{filter:drop-shadow(0 0 33px #fd426e77)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-3px)}40%,60%{transform:translateX(3px)}}
+.shell{position:relative;z-index:1;min-height:100dvh;display:grid;place-items:center;padding:26px 15px}
+.portal{width:min(100%,485px);background:linear-gradient(145deg,#191721f5,#0e111af5 55%,#13121cfa);border:1px solid #59313c;box-shadow:0 32px 100px #000b,0 0 80px #c01a3b10,inset 0 1px #fff1;border-radius:22px;overflow:hidden;animation:rise .5s ease-out both}
+.top{padding:18px 23px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;direction:ltr}
+.mark{color:#f2d7e0;font-family:system-ui,sans-serif;font-size:12px;font-weight:900;letter-spacing:.27em}.mark span{color:#fa5573}
+.status{font-size:10px;letter-spacing:.13em;color:#ecc7ce;display:flex;align-items:center;gap:6px;direction:ltr}
+.lamp{height:6px;width:6px;background:#ff345e;border-radius:50%;box-shadow:0 0 13px #ff345e;animation:pulse 2.2s infinite}
+.sigil{height:164px;display:grid;place-items:center;position:relative;margin:4px auto 0}
+.halo{position:absolute;width:144px;height:144px;border-radius:50%;background:radial-gradient(circle,#e52b4a21,#e52b4a06 48%,transparent 72%);box-shadow:0 0 62px #f63b5d20}
+.ring{position:absolute;border-radius:50%;border:1px solid #c5405c70}.ring.one{height:132px;width:132px;border-top-color:#ff617e;border-bottom-color:transparent;animation:orbit 13s linear infinite}.ring.two{height:105px;width:105px;border-right-color:#f2bb8d;border-left-color:transparent;animation:orbit 9s linear reverse infinite}
+.lock{position:relative;width:74px;height:74px;display:grid;place-items:center;background:linear-gradient(135deg,#501527,#160f1a);border:1px solid #fa456c77;border-radius:22px;box-shadow:0 0 28px #d9193e33,inset 0 1px #fff2;animation:breathe 4s infinite}
+.lock svg{width:37px;height:37px;stroke:#ff8ba5;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero{text-align:center;padding:0 24px 18px}
+.kicker{font:700 10px/1.5 system-ui,sans-serif;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9px 0 9px;font-weight:900}
+.intro{font-size:13px;line-height:1.9;color:#bdb0bf;margin:0 auto;max-width:385px}
+.rule{height:1px;background:linear-gradient(90deg,transparent,#a33c565c,transparent);margin:0 22px}
+.content{padding:21px 24px 24px}
+.label{font-size:13px;font-weight:800;display:block;margin:0 0 9px;color:#f3dce4}
+.access-wrap{position:relative}
+.access{display:block;width:100%;min-height:54px;text-align:center;direction:ltr;letter-spacing:.075em;font-weight:700;font-size:16px;border-radius:12px;border:1px solid #694052;background:#090b13;color:#f7edf4;padding:14px 12px;outline:none;transition:border .2s,box-shadow .2s}
+.access::placeholder{font-size:13px;font-weight:400;letter-spacing:.04em;color:#6e6675}
+.access:focus{border-color:#ff456b;box-shadow:0 0 0 3px #fa365924}
+.hint{font-size:11px;margin:8px 1px 0;color:#8f8192;line-height:1.7}
+.action{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:53px;margin-top:18px;border-radius:12px;border:1px solid #ff789849;background:linear-gradient(105deg,#9e1d3d,#dd264c 62%,#a21f44);box-shadow:0 14px 35px #9f193a40,inset 0 1px #ffb1c052;color:#fff;font-size:14px;font-weight:900;cursor:pointer;transition:transform .17s,filter .17s}
+.action:not(:disabled):active{transform:scale(.985)}.action:not(:disabled):hover{filter:brightness(1.13)}.action:disabled{opacity:.6;cursor:wait}
+.action svg{width:18px;height:18px}
+.notice{min-height:0;font-size:12px;line-height:1.8;margin-top:10px;color:#cbb9c5}.notice:not(:empty){padding:10px 12px;border:1px solid #743c4b;border-radius:9px;background:#2c1422}.notice.ok{color:#bbf3d1;border-color:#397358;background:#0d2b21}.notice.bad{color:#ffb5c3;animation:shake .35s ease}
+.next{margin-top:19px;border:1px solid #42564d;background:linear-gradient(135deg,#0a251c,#101b1c 80%);border-radius:15px;padding:17px;animation:rise .4s both}.next[hidden]{display:none}
+.step-mark{color:#aaf4d0;font:700 10px system-ui,sans-serif;letter-spacing:.13em;direction:ltr;text-align:left}.next h2{font-size:18px;margin:7px 0}.next p{color:#acc4b8;font-size:12px;line-height:1.8;margin:0 0 12px}
+.command{font:12px/1.8 monospace;word-break:break-all;direction:ltr;text-align:left;user-select:all;display:block;padding:12px;background:#050e0e;border:1px solid #375d4d;border-radius:10px;color:#bcffd8}
+.copy{width:100%;margin-top:10px;border:1px solid #436957;background:#173f30;color:#d5ffe6;border-radius:10px;padding:12px;font-size:13px;font-weight:800;cursor:pointer}
+.again{border:0;background:transparent;color:#bfddce;font-size:12px;text-decoration:underline;margin-top:12px;padding:5px;cursor:pointer}
+.bottom{border-top:1px solid #ffffff12;display:flex;justify-content:space-between;gap:10px;direction:ltr;padding:15px 23px;background:#0c0d15;color:#766e7d;font:700 9px system-ui,sans-serif;letter-spacing:.13em}
+.bottom strong{color:#cba3b0}
+@media(max-width:390px){.portal{border-radius:17px}.top,.content{padding-left:17px;padding-right:17px}.sigil{height:145px}.ring.one{height:119px;width:119px}.ring.two{height:95px;width:95px}.hero{padding:0 14px 16px}.access{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+/* Aiham | RK workspace: public gate retains original styling */
+.mark{font-size:13px;letter-spacing:.09em}.mark span{color:var(--red);margin:0 4px}
+.portal.unlocked{width:min(100%,850px)}.portal.unlocked .sigil,.portal.unlocked .hero,.portal.unlocked .rule,.portal.unlocked .gate-only{display:none}
+.portal.unlocked .top{padding-bottom:18px;border-bottom:1px solid #5b3041}
+.portal.unlocked .content{padding:22px 24px}
+.portal.unlocked .workspace.next{margin:0;border:0;background:none;padding:0;animation:rise .4s ease both}
+.workspace[hidden],.workspace-panel[hidden]{display:none!important}
+.workspace-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:7px 2px 18px}
+.workspace-head h2{font-size:clamp(23px,4vw,29px);margin:9px 0 5px;color:#fff;font-weight:900}
+.workspace-head p{font-size:13px;line-height:1.8;color:#ada3b2;margin:0;max-width:525px}
+.lock-center{white-space:nowrap;cursor:pointer;border:1px solid #5c3948;border-radius:10px;background:#201720;color:#ebc5d3;padding:10px 12px;font-size:12px;font-weight:800;transition:.2s}
+.lock-center:hover{background:#472334;color:#fff}
+.workspace-signal{color:#bde3cd;font-size:11px;padding:11px 13px;border:1px solid #2b5c49;border-radius:10px;background:#10241d;display:flex;align-items:center;gap:8px;line-height:1.7}
+.signal-dot{height:7px;width:7px;flex-shrink:0;background:#7beeaa;border-radius:50%;box-shadow:0 0 12px #7beeaa77}
+.hub-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:21px 0 13px}
+.hub-tab{display:flex;justify-content:center;align-items:center;gap:7px;min-height:46px;border:1px solid #3c3340;border-radius:11px;background:#14141e;color:#a99cab;padding:10px 5px;font-size:13px;font-weight:800;cursor:pointer;transition:.2s}
+.hub-tab:hover{border-color:#b44363;color:#ffe6ee}.hub-tab.selected{border-color:#b14664;background:linear-gradient(135deg,#532233,#281923);color:#fff;box-shadow:inset 0 1px #ff8fa31a}
+.hub-tab span{font-size:9px;color:#f7becf}
+.workspace-panel{min-height:285px;padding:23px;background:linear-gradient(138deg,#191923,#0d111a);border:1px solid #383442;border-radius:15px;animation:rise .3s ease}
+.module-eyebrow{color:#e9a5b6;letter-spacing:.14em;font:800 10px system-ui,sans-serif;direction:ltr;text-align:left}
+.module-header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin:10px 0 18px}
+.workspace-panel h3{font-size:20px;margin:0 0 7px;color:#fff}
+.workspace-panel p{color:#b4a6b5;line-height:1.85;font-size:13px;margin:0}
+.module-pill{display:inline-block;flex-shrink:0;align-self:flex-start;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800;line-height:1.4}
+.module-pill.ready{color:#b9f9d5;background:#1c372c;border:1px solid #447b60}
+.module-pill.future{color:#e6cbbb;background:#35261f;border:1px solid #6f483a;margin-top:18px}
+.file-tile{display:flex;align-items:center;gap:15px;padding:15px;background:#101721;border:1px solid #3e394c;border-radius:13px;direction:ltr;text-align:left}
+.file-icon{height:43px;width:43px;display:grid;place-items:center;border-radius:11px;background:#4b1c2e;color:#ffacc1;font-size:23px}
+.file-descr{display:flex;flex-direction:column;gap:4px;min-width:0}
+.file-descr strong{color:#f4eaf1;font:800 14px system-ui,sans-serif;overflow-wrap:anywhere}
+.file-descr span{font-size:11px;color:#b3aabb;direction:rtl;text-align:left}
+.file-check{margin-left:auto;color:#7fe7a7;font-weight:900;font-size:20px}
+.file-state{padding:10px 0 0;color:#c5b6c4;font-size:12px;line-height:1.8}
+.workspace-download{border:1px solid #a8425e;background:linear-gradient(125deg,#4c2031,#82243f);color:#fff;border-radius:10px;padding:12px 16px;font-size:13px;font-weight:800;margin:13px 0 19px;cursor:pointer}
+.workspace-download:hover{filter:brightness(1.15)}
+.command-title{font-size:13px;font-weight:800;color:#eac5d2;margin:2px 0 9px}
+.workspace-panel .command{font-size:12px}
+.workspace-panel .copy{cursor:pointer}
+.file-note{font-size:11px!important;color:#8e8795!important;margin-top:12px!important}
+.placeholder-symbol{font-size:48px;color:#e25079;margin:22px 0 13px;text-shadow:0 0 26px #d02e4c54;line-height:1}
+.workspace-foot{padding:20px 0 0;text-align:center;color:#cf9aaa;font-weight:900;font-size:12px}
+.workspace-foot span{font-weight:400;color:#8f8192}
+@media(max-width:580px){.portal.unlocked .content{padding:17px}.workspace-head{flex-wrap:wrap}.lock-center{margin-right:auto}.hub-tabs{gap:5px}.hub-tab{font-size:11px;padding:10px 2px}.workspace-panel{padding:16px}.module-header{flex-wrap:wrap;gap:10px}.file-tile{gap:10px}.file-icon{height:38px;width:38px}}
+
+.download-steps[hidden]{display:none}
+.download-steps{animation:rise .25s ease both;margin-top:14px}
+.steps-info{font-size:12px;line-height:1.8;color:#d3f5df;border:1px solid #376e58;background:#10281d;padding:11px;border-radius:10px;margin-bottom:15px}
+.step-box{border:1px solid #454050;border-radius:12px;background:#10131c;padding:13px;margin:12px 0}
+.step-label{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#f1e2e9;font-size:12px;font-weight:800;margin-bottom:10px}
+.step-label small{color:#a9a0b4;font-size:10px;font-weight:400}
+.step-number{display:grid;place-items:center;background:#70243f;color:#fff;border-radius:8px;width:24px;height:24px;flex-shrink:0;direction:ltr}
+.step-box .copy{margin-top:10px}
+.step-box .command{font-size:12px;line-height:1.75}
+
+/* Compact files area: one file, one action, collapsible setup commands */
+.files-compact{min-height:0;padding:20px}
+.files-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px}
+.files-head h3{font-size:20px;margin:5px 0 3px}
+.files-head p{font-size:12px;color:#9f98a8;margin:0}
+.files-count{font-size:11px;font-weight:750;white-space:nowrap;border:1px solid #554252;background:#271d2b;color:#efc8d3;padding:6px 10px;border-radius:999px}
+.single-file{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#10141e;border:1px solid #453747;border-radius:13px;padding:13px}
+.single-file-info{display:flex;align-items:center;gap:11px;min-width:0;flex:1}
+.single-file-icon{height:43px;width:43px;flex:0 0 43px;display:grid;place-items:center;border:1px solid #71394e;border-radius:11px;background:linear-gradient(145deg,#54243a,#261923);color:#ffd5df;font-size:22px}
+.single-file-text{display:flex;flex-direction:column;gap:5px;min-width:0}
+.single-file-text strong{display:block;color:#f6edf2;font:750 12px/1.5 system-ui,sans-serif;white-space:normal;overflow-wrap:anywhere;text-align:left}
+.single-file-text small{font-size:11px;color:#a99eaf;line-height:1.5}
+.file-download-btn{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:7px;color:#fff;border:1px solid #bd5974;background:linear-gradient(130deg,#75243c,#b52a4f);border-radius:9px;padding:11px 12px;font-size:12px;font-weight:850;cursor:pointer;white-space:nowrap;transition:background .2s,transform .2s}
+.file-download-btn:active{transform:scale(.97)}.file-download-btn:hover{filter:brightness(1.12)}
+.file-download-btn>span:first-child{font-size:17px;line-height:12px}
+.download-feedback[hidden],.setup-accordion[hidden]{display:none!important}
+.download-feedback{display:flex;align-items:center;gap:9px;border:1px solid #2f6954;border-radius:10px;background:#10251d;color:#b2efd2;margin:12px 0 0;padding:10px 12px;font-size:12px;line-height:1.7}
+.download-feedback-icon{display:grid;place-items:center;flex:0 0 20px;height:20px;width:20px;border-radius:50%;background:#28694e;color:#fff}
+.setup-accordion{margin-top:12px;border:1px solid #534251;border-radius:12px;background:#12141d;overflow:hidden}
+.setup-accordion>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px}
+.setup-accordion>summary::-webkit-details-marker,.setup-help>summary::-webkit-details-marker{display:none}
+.accordion-head{display:flex;align-items:center;gap:10px;min-width:0}
+.accordion-icon{height:35px;width:35px;border:1px solid #5d4152;background:#261b2a;border-radius:10px;display:grid;place-items:center;color:#e3a6bd;font-size:19px;flex-shrink:0}
+.accordion-label{display:flex;flex-direction:column;gap:3px;min-width:0}
+.accordion-label strong{font-size:12px;color:#f9ebf0}
+.accordion-label small{font-size:10px;color:#988a9a}
+.accordion-chevron{font-size:22px;color:#f0b1c4;transition:transform .18s}
+.setup-accordion[open]>summary{border-bottom:1px solid #3c343f}
+.setup-accordion[open]>summary .accordion-chevron{transform:rotate(180deg)}
+.accordion-body{padding:13px 14px;border-top:1px solid #34303d}
+.compact-step+.compact-step{margin-top:13px;padding-top:12px;border-top:1px solid #34303d}
+.compact-step-title{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.compact-step-title>span{font:800 10px system-ui,sans-serif;color:#ffb8cb;background:#432135;padding:4px 6px;border-radius:6px}
+.compact-step-title strong{font-size:12px;color:#f5e6ed}
+.compact-step-title small{font-size:10px;color:#a399ac}
+.compact-command-row{display:flex;align-items:stretch;gap:8px;direction:ltr}
+.compact-code{background:#080c13;border:1px solid #3b3c4a;border-radius:8px;padding:11px;flex:1;min-width:0;color:#c5f4d8;font:11px/1.55 ui-monospace,Consolas,monospace;word-break:break-all;text-align:left;direction:ltr;user-select:all}
+.tiny-copy{border:1px solid #6e4657;border-radius:8px;background:#321d2a;color:#f3d6e0;padding:0 12px;font-size:11px;font-weight:800;cursor:pointer;flex:0 0 52px}
+.tiny-copy:hover{background:#51263a}
+.setup-help{margin-top:12px;padding:0;border-top:1px solid #34303d}
+.setup-help>summary{list-style:none;color:#a9a0af;font-size:11px;cursor:pointer;padding:12px 0 2px}
+.setup-help>summary:before{content:"＋";margin-left:6px;color:#ec9cb6}
+.setup-help[open]>summary:before{content:"−"}
+.setup-help p{font-size:11px;line-height:1.8;margin:8px 0 3px;color:#b7aebe}
+@media(max-width:440px){.files-compact{padding:14px}.single-file{gap:9px;padding:10px}.single-file-icon{height:37px;width:37px;flex-basis:37px}.single-file-text strong{font-size:11px}.single-file-text small{font-size:10px}.file-download-btn{padding:10px 9px;font-size:11px}.accordion-body{padding:11px}.tiny-copy{flex-basis:47px;padding:0 8px}}
+</style>
+<script>
+(function(){
+  try{
+    const timestamp=Number(sessionStorage.getItem("aiham-rk-entry-v1")||"0");
+    if(!timestamp || Date.now()-timestamp>15*60*1000 || timestamp>Date.now()+60000){
+      window.location.replace("../");
+    }
+  }catch(error){window.location.replace("../");}
+})();
+</script>
+</head>
+<body>
+<div class="ambience" aria-hidden="true"></div>
+<div class="shell">
+  <main class="portal" id="portal">
+    <header class="top">
+      <div class="mark">〽️ Aiham <span>|</span> RK</div>
+      <div class="status"><span class="lamp"></span>RESTRICTED ACCESS</div>
+    </header>
+    <div class="sigil" aria-hidden="true">
+      <div class="halo"></div><div class="ring one"></div><div class="ring two"></div>
+      <div class="lock"><svg viewBox="0 0 32 32"><rect x="7" y="14" width="18" height="14" rx="3"/><path d="M11 14V9a5 5 0 0 1 10 0v5"/><path d="M16 20v3"/></svg></div>
+    </div>
+    <section class="hero">
+      <div class="kicker">Restricted / Encrypted Package</div>
+      <h1>بوابة الوصول المشفّر</h1>
+      <p class="intro">ملف إعداد Redmi محميّ بالتشفير. أدخل رمز الوصول الصحيح للانتقال إلى المركز وفتح ملفاتنا الخاصة.</p>
+    </section>
+    <div class="rule"></div>
+    <section class="content">
+      <div class="gate-only">
+      <form id="f" autocomplete="off">
+        <label class="label" for="pin">رمز الوصول الخاص</label>
+        <div class="access-wrap"><input class="access" id="pin" type="text" autocapitalize="characters" inputmode="text" spellcheck="false" maxlength="34" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" required aria-describedby="hint"></div>
+        <div class="hint" id="hint">الرمز مكوّن من 20 حرفًا ورقمًا. يمكن كتابته مع الشرطات أو بدونها.</div>
+        <button class="action" id="btn" type="submit"><span id="btn-label">فتح المركز الخاص</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 17 5-5-5-5"/><path d="M12 17h6"/></svg></button>
+      </form>
+      <div class="notice" id="status" role="status" aria-live="polite"></div>
+      </div>
+      <section class="next workspace" id="after" hidden aria-live="polite">
+        <div class="workspace-head">
+          <div>
+            <div class="step-mark">AIHAM | RK / RESTRICTED SECTOR</div>
+            <h2>مركز العمليات</h2>
+            <p>هذا نطاق 〽️Aiham | RK المقيد. الملفات والأدوات والإصدارات تحت إدارة واحدة؛ لا تنزيل دون إجراء صريح.</p>
+          </div>
+          <button class="lock-center" type="button" id="lock-center" title="إغلاق المركز والعودة لإدخال الرمز">إغلاق الوصول <span aria-hidden="true">⌁</span></button>
+        </div>
+        <div class="workspace-signal"><span class="signal-dot" aria-hidden="true"></span> تم قبول رمز الوصول · المركز مفتوح لهذه الجلسة فقط</div>
+        <div class="hub-tabs" role="tablist" aria-label="أقسام المركز">
+          <button class="hub-tab selected" type="button" data-tab="files" role="tab" aria-selected="true" aria-controls="panel-files">ملفاتنا <span>01</span></button>
+          <button class="hub-tab" type="button" data-tab="projects" role="tab" aria-selected="false" aria-controls="panel-projects">المشاريع</button>
+          <button class="hub-tab" type="button" data-tab="ideas" role="tab" aria-selected="false" aria-controls="panel-ideas">الأفكار</button>
+          <button class="hub-tab" type="button" data-tab="tools" role="tab" aria-selected="false" aria-controls="panel-tools">الأدوات</button>
+        </div>
+        <div class="workspace-panel files-compact" data-panel="files" id="panel-files" role="tabpanel">
+          <div class="files-head">
+            <div>
+              <div class="module-eyebrow">PRIVATE LIBRARY / 01</div>
+              <h3>ملفاتنا</h3>
+              <p>مستودع الملفات المصرّح بتنزيلها.</p>
+            </div>
+            <span class="files-count">ملف واحد</span>
+          </div>
+
+          <div class="single-file" aria-label="Redmi Remote Setup">
+            <div class="single-file-info">
+              <div class="single-file-icon" aria-hidden="true">⌘</div>
+              <div class="single-file-text">
+                <strong dir="ltr">Redmi_Remote_Setup.sh</strong>
+                <small>ملف إعداد Redmi · Shell Script</small>
+              </div>
+            </div>
+            <button class="file-download-btn" id="download-file" type="button" aria-label="تنزيل ملف إعداد Redmi">
+              <span aria-hidden="true">↓</span><span id="download-label">تنزيل</span>
+            </button>
+          </div>
+
+          <div class="download-feedback" id="download-feedback" role="status" hidden>
+            <span class="download-feedback-icon" aria-hidden="true">✓</span>
+            بدأ التنزيل. تأكد من حفظ الملف في مجلد Download.
+          </div>
+
+          <details id="download-steps" class="setup-accordion" hidden>
+            <summary>
+              <span class="accordion-head">
+                <span class="accordion-icon" aria-hidden="true">⌘</span>
+                <span class="accordion-label"><strong>خطوات التشغيل في Termux</strong><small>أمران فقط · الأول عند الحاجة</small></span>
+              </span>
+              <span class="accordion-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="accordion-body">
+              <div class="compact-step">
+                <div class="compact-step-title"><span>01</span><strong>تفعيل وصول التخزين</strong><small>عند الحاجة فقط</small></div>
+                <div class="compact-command-row">
+                  <code class="compact-code" id="storage-command">termux-setup-storage</code>
+                  <button type="button" id="copy-storage" class="tiny-copy" aria-label="نسخ أمر الوصول للتخزين">نسخ</button>
+                </div>
+              </div>
+              <div class="compact-step">
+                <div class="compact-step-title"><span>02</span><strong>تشغيل ملف Redmi</strong></div>
+                <div class="compact-command-row">
+                  <code class="compact-code" id="run-command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
+                  <button type="button" id="copy-run" class="tiny-copy" aria-label="نسخ أمر تشغيل ملف Redmi">نسخ</button>
+                </div>
+              </div>
+              <details class="setup-help">
+                <summary>لم تجد الملف في Termux؟</summary>
+                <p>تأكد من تنزيله داخل مجلد Download. وإذا تغيّر اسمه إلى <span dir="ltr">Redmi_Remote_Setup (1).sh</span>، أعد تسميته إلى <span dir="ltr">Redmi_Remote_Setup.sh</span>.</p>
+              </details>
+            </div>
+          </details>
+        </div>
+        <div class="workspace-panel" data-panel="projects" id="panel-projects" role="tabpanel" hidden>
+          <div class="module-eyebrow">NEXT MODULE / PROJECTS</div>
+          <div class="placeholder-symbol" aria-hidden="true">▦</div>
+          <h3>قطاع المشاريع</h3>
+          <p>قطاع مخصص لإصدارات المشاريع ومساراتها التنفيذية. لا توجد عناصر منشورة حاليًا.</p>
+          <span class="module-pill future">NO ACTIVE PROJECTS · القطاع غير مفعل</span>
+        </div>
+        <div class="workspace-panel" data-panel="ideas" id="panel-ideas" role="tabpanel" hidden>
+          <div class="module-eyebrow">NEXT MODULE / IDEAS LAB</div>
+          <div class="placeholder-symbol" aria-hidden="true">✧</div>
+          <h3>سجل الأفكار</h3>
+          <p>سجل مخصص للمفاهيم والتصورات قبل اعتمادها كمشاريع رسمية.</p>
+          <span class="module-pill future">NO RECORDS · السجل غير مفعل</span>
+        </div>
+        <div class="workspace-panel" data-panel="tools" id="panel-tools" role="tabpanel" hidden>
+          <div class="module-eyebrow">NEXT MODULE / TOOLBOX</div>
+          <div class="placeholder-symbol" aria-hidden="true">⌘</div>
+          <h3>غرفة الأدوات</h3>
+          <p>حجرة الأدوات والملحقات التنفيذية. لا توجد أدوات معتمدة للنشر بعد.</p>
+          <span class="module-pill future">NO TOOLS · القطاع غير مفعل</span>
+        </div>
+        <div class="workspace-foot">〽️ Aiham | RK <span>— PRIVATE OPERATIONS • RESTRICTED ACCESS</span></div>
+      </section>
+    </section>
+    <footer class="bottom"><span>ENCRYPTED DELIVERY</span><strong>AUTHORIZED ACCESS ONLY</strong></footer>
+  </main>
+</div>
+<script>
+const PAYLOAD={s:"wmYGCDSRuj9zUq5/QL1SYA==",v:"SoIPKSOiZv1Qmu2p",c:"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"};
+const el=id=>document.getElementById(id);
+const bytes=s=>Uint8Array.from(atob(s),x=>x.charCodeAt(0));
+const storageCommand="termux-setup-storage";
+const runCommand="sh ~/storage/downloads/Redmi_Remote_Setup.sh";
+let downloaded=null;
+function downloadFile(){
+ if(!downloaded)return;
+ const url=URL.createObjectURL(downloaded);
+ const link=document.createElement("a");
+ link.href=url;
+ link.download="Redmi_Remote_Setup.sh";
+ document.body.append(link);
+ link.click();
+ link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),15000);
+ el("download-steps").hidden=false;
+ el("download-steps").open=true;
+ el("download-feedback").hidden=false;
+ el("download-label").textContent="إعادة التنزيل";
+}
+function message(text,kind){
+ el("status").textContent=text;
+ el("status").className="notice"+(kind?" "+kind:"");
+}
+function showPanel(tab){
+ document.querySelectorAll("[data-panel]").forEach(panel=>{panel.hidden=panel.dataset.panel!==tab});
+ document.querySelectorAll("[data-tab]").forEach(button=>{
+  const active=button.dataset.tab===tab;
+  button.classList.toggle("selected",active);
+  button.setAttribute("aria-selected",active?"true":"false");
+ });
+}
+el("f").addEventListener("submit",async e=>{
+ e.preventDefault();
+ const code=el("pin").value.replace(/[\s-]/g,"").toUpperCase();
+ if(!/^[A-HJ-NP-Z2-9]{20}$/.test(code)){message("الرمز غير مكتمل. تأكد من كتابة الأحرف والأرقام العشرين.","bad");return}
+ const btn=el("btn");btn.disabled=true;el("btn-label").textContent="جارٍ التحقق وفك التشفير...";
+ message("يتم التحقق من رمز الوصول...");
+ try{
+  if(!globalThis.crypto?.subtle||typeof DecompressionStream==="undefined")throw new Error("browser");
+  const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(code),{name:"PBKDF2"},false,["deriveKey"]);
+  const key=await crypto.subtle.deriveKey({name:"PBKDF2",salt:bytes(PAYLOAD.s),iterations:600000,hash:"SHA-256"},material,{name:"AES-GCM",length:256},false,["decrypt"]);
+  const plain=await crypto.subtle.decrypt({name:"AES-GCM",iv:bytes(PAYLOAD.v)},key,bytes(PAYLOAD.c));
+  const file=await new Response(new Blob([plain]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+  downloaded=new Blob([file],{type:"application/octet-stream"});
+  el("pin").value="";
+  el("download-steps").hidden=true;
+  el("download-steps").open=false;
+  el("download-feedback").hidden=true;
+  el("download-label").textContent="تنزيل";
+  el("after").hidden=false;
+  el("portal").classList.add("unlocked");
+  showPanel("files");
+  message("");
+  window.scrollTo({top:0,behavior:"auto"});
+ }catch(err){
+  message(err.message==="browser"?"هذا المتصفح لا يدعم فك التشفير. افتح الرابط في Chrome.":"رمز الوصول غير صحيح. حاول مرة أخرى.","bad");
+ }finally{
+  btn.disabled=false;el("btn-label").textContent="فتح المركز الخاص";
+ }
+});
+document.querySelectorAll("[data-tab]").forEach(button=>{
+ button.addEventListener("click",()=>{if(downloaded)showPanel(button.dataset.tab)});
+});
+el("download-file").addEventListener("click",downloadFile);
+el("lock-center").addEventListener("click",()=>{
+ downloaded=null;
+ el("download-steps").hidden=true;
+ el("download-steps").open=false;
+ el("download-feedback").hidden=true;
+ el("download-label").textContent="تنزيل";
+ try{sessionStorage.removeItem("aiham-rk-entry-v1")}catch(_){}
+ el("after").hidden=true;
+ el("portal").classList.remove("unlocked");
+ el("pin").value="";
+ message("");
+ window.location.replace("../");
+});
+async function copyCommand(value,button){
+ let ok=false;
+ try{await navigator.clipboard.writeText(value);ok=true}
+ catch{
+  const temp=document.createElement("textarea");
+  temp.value=value;temp.style.position="fixed";temp.style.opacity="0";
+  document.body.append(temp);temp.select();
+  try{ok=document.execCommand("copy")}catch{}
+  temp.remove();
+ }
+ button.textContent=ok?"تم النسخ ✓":"اضغط مطولًا على الأمر لنسخه";
+ if(ok)setTimeout(()=>{button.textContent="نسخ"},2200);
+}
+el("copy-storage").addEventListener("click",()=>copyCommand(storageCommand,el("copy-storage")));
+el("copy-run").addEventListener("click",()=>copyCommand(runCommand,el("copy-run")));
+</script>
+</body>
+</html>

@@ -48,33 +48,6 @@ a.diag-link:hover{text-decoration:underline}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-4px)}}
 @media(max-width:640px){main{margin-top:8vh;padding:0 20px}h1{font-size:1.45em}.reload-button{width:100%;padding:10px 20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-
-/* The error screen remains restrained until the hidden access route is opened. */
-:root{--threat:#fa2848;--threat-edge:#76192e}
-body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 4px,#0003 5px,transparent 6px);transition:opacity .55s;z-index:2}
-body.access-active:after{opacity:.12}
-body.access-active .passcode-panel{border-color:#8c2b46;box-shadow:0 0 0 1px #fb2b5320,0 0 33px #b620391a;background:linear-gradient(130deg,var(--details),#5121380d)}
-body.access-active .passcode-input:focus{border-color:var(--threat);box-shadow:0 0 0 2px #fa284820}
-body.access-active #passcode-submit{background:linear-gradient(110deg,#78152b,#cb2448);color:#fff;font-weight:800}
-body.access-active #passcode-submit:hover{background:linear-gradient(110deg,#9f1b37,#ec2c56)}
-.hidden-status{font:800 10px/1.4 ui-monospace,Consolas,monospace;color:var(--threat);letter-spacing:.18em;margin:0 0 11px;display:flex;align-items:center;gap:9px}
-.hidden-status:before{content:"";width:7px;height:7px;background:var(--threat);border-radius:50%;box-shadow:0 0 14px #f32e5680;animation:threatPulse 2s infinite}
-@keyframes threatPulse{0%,100%{opacity:.42}50%{opacity:1}}
-@keyframes redFlicker{0%,95%,100%{opacity:1}96%{opacity:.38}97%{opacity:.8}}
-@keyframes transitionEnter{0%{opacity:0;transform:scale(1.02)}100%{opacity:1;transform:scale(1)}}
-@keyframes bandScan{0%{transform:translateY(-100vh)}100%{transform:translateY(100vh)}}
-.transition-gate[hidden]{display:none}
-.transition-gate{position:fixed;inset:0;z-index:1000;background:radial-gradient(ellipse at 50% 45%,#36091a,#09050a 65%,#020203 100%);display:grid;place-items:center;text-align:center;padding:20px;animation:transitionEnter .28s ease-out both;overflow:hidden}
-.transition-gate:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 5px,#ff45600a 6px);pointer-events:none}
-.transition-gate:after{content:"";position:absolute;top:0;left:0;right:0;height:13vh;background:linear-gradient(transparent,#ff345523,transparent);filter:blur(18px);animation:bandScan 1.5s linear infinite;pointer-events:none}
-.transition-content{position:relative;z-index:1;width:min(100%,530px)}
-.transition-icon{width:78px;height:78px;border:1px solid #a5284b;border-radius:24px;background:#2b0e1c;display:grid;place-items:center;margin:0 auto 25px;box-shadow:0 0 90px #e6264940;color:#ff5277;font:900 36px monospace}
-.transition-code{font:800 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.27em;color:#ff9caf}
-.transition-title{color:#fff;font:900 clamp(28px,7vw,46px)/1.2 ui-monospace,Consolas,monospace;letter-spacing:.07em;margin:14px 0;animation:redFlicker 3s infinite}
-.transition-sub{font:700 11px/1.7 ui-monospace,Consolas,monospace;letter-spacing:.2em;color:#b57b90}
-.transition-line{width:100%;height:2px;background:#4b1e2b;margin-top:27px;overflow:hidden}
-.transition-line>span{display:block;height:100%;background:#fa385e;width:0;transition:width .65s ease;box-shadow:0 0 12px #fa385e}
-@media(prefers-reduced-motion:reduce){.transition-gate,.transition-gate:after,.transition-title,.hidden-status:before{animation:none!important}}
 </style>
 </head>
 <body>
@@ -99,7 +72,6 @@ body.access-active #passcode-submit:hover{background:linear-gradient(110deg,#9f1
   <li><a class="diag-link" role="button" tabindex="0" id="more-link">More</a></li>
  </ul>
  <div class="passcode-panel" id="passcode-panel" dir="ltr" aria-hidden="true">
-  <div class="hidden-status">RESTRICTED ENTRY / KEY REQUIRED</div>
   <form class="passcode-form" id="passcode-form" autocomplete="off">
    <input type="password" id="passcode-input" class="passcode-input" placeholder="Enter code..." aria-label="Enter code" required>
    <button type="submit" class="passcode-submit" id="passcode-submit">Continue</button>
@@ -110,15 +82,6 @@ body.access-active #passcode-submit:hover{background:linear-gradient(110deg,#9f1
  <div class="error-code" id="error-code">ERR_CONNECTION_TIMED_OUT</div>
  <div class="diagnostic-panel" id="diagnostic-panel" aria-live="polite"></div>
 </main>
-<div id="transition-gate" class="transition-gate" hidden aria-live="polite" role="status">
- <div class="transition-content">
-  <div class="transition-icon" aria-hidden="true">⌑</div>
-  <div class="transition-code">ACCESS PROTOCOL / STAGE 01</div>
-  <div class="transition-title">CODE ACCEPTED</div>
-  <div class="transition-sub">OPENING RESTRICTED GATE</div>
-  <div class="transition-line" aria-hidden="true"><span id="transition-fill"></span></div>
- </div>
-</div>
 <script>
 (function(){
  const CODE_SALT="aa0f323a978c9b6025a7dbf804a456b7";
@@ -137,13 +100,13 @@ body.access-active #passcode-submit:hover{background:linear-gradient(110deg,#9f1
   diagnostics:{title:"Network diagnostics",body:"Use your device's connection settings to diagnose network problems."}
  };
  const resetFeedback=()=>{feedback.className="passcode-feedback";feedback.textContent=""};
- function closePanel(){panel.classList.remove("active");panel.setAttribute("aria-hidden","true");document.body.classList.remove("access-active");input.value="";input.disabled=false;submit.disabled=false;resetFeedback()}
+ function closePanel(){panel.classList.remove("active");panel.setAttribute("aria-hidden","true");input.value="";input.disabled=false;submit.disabled=false;resetFeedback()}
  function closeDiagnostics(){diag.classList.remove("active");activeTopic=null}
  reloadBtn.addEventListener("click",()=>{
   reloadBtn.disabled=true;closePanel();closeDiagnostics();progress.classList.add("loading");wrapper.classList.add("reloading");
   setTimeout(()=>{progress.classList.remove("loading");wrapper.classList.remove("reloading");reloadBtn.disabled=false},700);
  });
- function togglePanel(e){e.preventDefault();const opening=!panel.classList.contains("active");closeDiagnostics();closePanel();if(opening){panel.classList.add("active");panel.setAttribute("aria-hidden","false");document.body.classList.add("access-active");input.focus()}}
+ function togglePanel(e){e.preventDefault();const opening=!panel.classList.contains("active");closeDiagnostics();closePanel();if(opening){panel.classList.add("active");panel.setAttribute("aria-hidden","false");input.focus()}}
  $("more-link").addEventListener("click",togglePanel);
  $("more-link").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){togglePanel(e)}});
  document.querySelectorAll(".diag-link[data-topic]").forEach(a=>{
@@ -165,9 +128,7 @@ body.access-active #passcode-submit:hover{background:linear-gradient(110deg,#9f1
    const hash=Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",bytes))).map(b=>b.toString(16).padStart(2,"0")).join("");
    if(hash!==CODE_HASH)throw Error("invalid");
    sessionStorage.setItem(SESSION_KEY,String(Date.now()));
-   const transition=$("transition-gate");transition.hidden=false;
-   $("transition-fill").style.width="100%";
-   setTimeout(()=>window.location.assign(ENTRY_PATH),700);
+   window.location.assign(ENTRY_PATH);
   }catch(err){
    feedback.textContent="Incorrect code. Please try again.";
    feedback.className="passcode-feedback error";

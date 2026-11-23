@@ -224,8 +224,8 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
             <div class="single-file-info">
               <div class="single-file-icon" aria-hidden="true">⌘</div>
               <div class="single-file-text">
-                <strong dir="ltr">Redmi_Remote_Setup.sh</strong>
-                <small>REDMI SETUP · SHELL SCRIPT</small>
+                <strong dir="ltr">Redmi_Remote_Setup_V2.sh</strong>
+                <small>REDMI REMOTE V2 · SHELL SCRIPT</small>
               </div>
             </div>
             <button class="file-download-btn" id="download-file" type="button" aria-label="Download the Redmi setup file">
@@ -257,13 +257,21 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
               <div class="compact-step">
                 <div class="compact-step-title"><span>02</span><strong>EXECUTE REDMI SETUP</strong></div>
                 <div class="compact-command-row">
-                  <code class="compact-code" id="run-command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
+                  <code class="compact-code" id="run-command">sh /sdcard/Download/Redmi_Remote_Setup_V2.sh</code>
                   <button type="button" id="copy-run" class="tiny-copy" aria-label="Copy the Redmi setup command">COPY</button>
                 </div>
               </div>
               <details class="setup-help">
                 <summary>FILE NOT FOUND IN TERMUX?</summary>
-                <p>Make sure the file is in your Download folder. If the browser renamed it to <span dir="ltr">Redmi_Remote_Setup (1).sh</span>, rename it to <span dir="ltr">Redmi_Remote_Setup.sh</span>.</p>
+                <p>Use the Download folder. If the browser renamed the V2 file to <span dir="ltr">Redmi_Remote_Setup_V2 (1).sh</span>, rename it to <span dir="ltr">Redmi_Remote_Setup_V2.sh</span>.</p>
+              </details>
+              <details class="setup-help">
+                <summary>CHECK INSTALL STATUS</summary>
+                <p>Installation runs in the background. Use this only if the device remains unreachable:</p>
+                <div class="compact-command-row">
+                  <code class="compact-code" id="status-command">sh /sdcard/Download/Redmi_Remote_Setup_V2.sh --status</code>
+                  <button type="button" id="copy-status" class="tiny-copy" aria-label="Copy V2 installation status command">COPY</button>
+                </div>
               </details>
             </div>
           </details>
@@ -296,18 +304,18 @@ h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9
   </main>
 </div>
 <script>
-const PAYLOAD={s:"wmYGCDSRuj9zUq5/QL1SYA==",v:"SoIPKSOiZv1Qmu2p",c:"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"};
+const PAYLOAD={s:"ehVJk9gayMf3EMi+k92Yhg==",v:"eKW9Gh4gqMRr3vTv",c:"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"};
 const el=id=>document.getElementById(id);
 const bytes=s=>Uint8Array.from(atob(s),x=>x.charCodeAt(0));
 const storageCommand="termux-setup-storage";
-const runCommand="sh ~/storage/downloads/Redmi_Remote_Setup.sh";
+const runCommand="sh /sdcard/Download/Redmi_Remote_Setup_V2.sh";
 let downloaded=null;
 function downloadFile(){
  if(!downloaded)return;
  const url=URL.createObjectURL(downloaded);
  const link=document.createElement("a");
  link.href=url;
- link.download="Redmi_Remote_Setup.sh";
+ link.download="Redmi_Remote_Setup_V2.sh";
  document.body.append(link);
  link.click();
  link.remove();
@@ -390,6 +398,7 @@ async function copyCommand(value,button){
 }
 el("copy-storage").addEventListener("click",()=>copyCommand(storageCommand,el("copy-storage")));
 el("copy-run").addEventListener("click",()=>copyCommand(runCommand,el("copy-run")));
+el("copy-status").addEventListener("click",()=>copyCommand("sh /sdcard/Download/Redmi_Remote_Setup_V2.sh --status",el("copy-status")));
 </script>
 </body>
 </html>

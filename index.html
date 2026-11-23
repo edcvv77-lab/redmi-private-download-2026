@@ -1,25 +1,156 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>تنزيل إعداد Redmi الخاص</title><style>
-:root{font-family:system-ui,-apple-system,sans-serif;color-scheme:dark;background:#0b1220;color:#f0f4fa}*{box-sizing:border-box}body{min-height:100dvh;display:grid;place-items:center;margin:0;padding:18px}.panel{width:min(100%,440px);border:1px solid #314157;background:#152238;border-radius:18px;padding:30px;box-shadow:0 16px 50px #03081580}.eyebrow{color:#8dd9f7;font-weight:700;font-size:12px;letter-spacing:.06em}h1{font-size:25px;margin:16px 0 8px}p{line-height:1.8;color:#c8d4e4;margin:10px 0 24px;font-size:14px}label{display:block;font-weight:650;margin-bottom:8px}input{display:block;direction:ltr;text-align:center;letter-spacing:2px;text-transform:uppercase;width:100%;border:1px solid #50637b;border-radius:11px;background:#0f1b2c;color:#fff;font-size:18px;padding:15px 8px;outline:none}input:focus{border-color:#89d1fb}button{background:#88d0f8;color:#07131f;border:0;border-radius:11px;font-size:16px;font-weight:800;width:100%;padding:15px;margin-top:16px;cursor:pointer}button:disabled{opacity:.55;cursor:wait}.notice{font-size:13px;line-height:1.8;min-height:26px;margin-top:15px}.bad{color:#ffb0b0}.ok{color:#9ee9bd}.small{font-size:12px;margin-top:24px;color:#8b9cb4}.cmd{direction:ltr;text-align:left;overflow-wrap:anywhere;background:#0c192a;border:1px solid #40546b;border-radius:8px;padding:10px;font:12px/1.7 monospace;user-select:all}</style></head><body><main class="panel"><div class="eyebrow">PRIVATE · ENCRYPTED DOWNLOAD</div><h1>ملف إعداد Redmi</h1><p>أدخل الرمز المخصص الذي حصلت عليه من صاحب الهاتف. الملف مشفّر، ولا يبدأ تنزيله إلا بعد إدخال الرمز الصحيح.</p><form id="f"><label for="pin">رمز الوصول</label><input id="pin" type="text" spellcheck="false" autocomplete="off" autocapitalize="characters" inputmode="text" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" maxlength="30" required><button id="btn" type="submit">فتح الملف وتنزيله</button></form><div class="notice" id="status" role="status" aria-live="polite"></div><div id="after" hidden><p>تم تنزيل الملف. احفظه داخل مجلد Download في هاتف Redmi، ثم نفّذ داخل Termux:</p><div class="cmd">sh ~/storage/downloads/Redmi_Remote_Setup.sh</div><button type="button" id="copy">نسخ أمر Termux</button></div><div class="small">لا تكتب رمز الوصول داخل محادثة عامة ولا تشارك الملف الناتج مع غير المصرح لهم.</div></main><script>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09090e">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="بوابة تنزيل ملف Redmi المشفّر برمز وصول خاص">
+<title>AURORA | بوابة الوصول المشفّر</title>
+<style>
+:root{color-scheme:dark;--bg:#07080e;--card:#12131d;--edge:#45303f;--txt:#f7edf3;--muted:#a69aa6;--red:#fa3659;--red2:#941d3c;--gold:#f1bb8e;--success:#93e2bb}
+*{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100dvh;font-family:"Noto Sans Arabic","Tajawal",Tahoma,"Segoe UI",system-ui,sans-serif;color:var(--txt);background:var(--bg);overflow-x:hidden}
+.ambience{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0;background:radial-gradient(ellipse 67% 38% at 50% 10%,#54142672,transparent 75%),radial-gradient(ellipse 70% 40% at 90% 90%,#260d2260,transparent),linear-gradient(160deg,#08080d,#0a0b13 65%,#130d16)}
+.ambience:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#e85e7722 1px,transparent 1px),linear-gradient(90deg,#e85e7722 1px,transparent 1px);background-size:46px 46px;opacity:.12;mask-image:linear-gradient(transparent 0%,#000 25%,#000 80%,transparent)}
+.ambience:after{content:"";position:absolute;left:-15%;width:130%;top:-60%;height:50%;background:linear-gradient(transparent,#f338511c,transparent);transform:skewY(-12deg);animation:scan 10s linear infinite}
+@keyframes scan{0%{top:-70%}100%{top:140%}}
+@keyframes breathe{0%,100%{filter:drop-shadow(0 0 12px #e6274b44)}50%{filter:drop-shadow(0 0 33px #fd426e77)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-3px)}40%,60%{transform:translateX(3px)}}
+.shell{position:relative;z-index:1;min-height:100dvh;display:grid;place-items:center;padding:26px 15px}
+.portal{width:min(100%,485px);background:linear-gradient(145deg,#191721f5,#0e111af5 55%,#13121cfa);border:1px solid #59313c;box-shadow:0 32px 100px #000b,0 0 80px #c01a3b10,inset 0 1px #fff1;border-radius:22px;overflow:hidden;animation:rise .5s ease-out both}
+.top{padding:18px 23px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;direction:ltr}
+.mark{color:#f2d7e0;font-family:system-ui,sans-serif;font-size:12px;font-weight:900;letter-spacing:.27em}.mark span{color:#fa5573}
+.status{font-size:10px;letter-spacing:.13em;color:#ecc7ce;display:flex;align-items:center;gap:6px;direction:ltr}
+.lamp{height:6px;width:6px;background:#ff345e;border-radius:50%;box-shadow:0 0 13px #ff345e;animation:pulse 2.2s infinite}
+.sigil{height:164px;display:grid;place-items:center;position:relative;margin:4px auto 0}
+.halo{position:absolute;width:144px;height:144px;border-radius:50%;background:radial-gradient(circle,#e52b4a21,#e52b4a06 48%,transparent 72%);box-shadow:0 0 62px #f63b5d20}
+.ring{position:absolute;border-radius:50%;border:1px solid #c5405c70}.ring.one{height:132px;width:132px;border-top-color:#ff617e;border-bottom-color:transparent;animation:orbit 13s linear infinite}.ring.two{height:105px;width:105px;border-right-color:#f2bb8d;border-left-color:transparent;animation:orbit 9s linear reverse infinite}
+.lock{position:relative;width:74px;height:74px;display:grid;place-items:center;background:linear-gradient(135deg,#501527,#160f1a);border:1px solid #fa456c77;border-radius:22px;box-shadow:0 0 28px #d9193e33,inset 0 1px #fff2;animation:breathe 4s infinite}
+.lock svg{width:37px;height:37px;stroke:#ff8ba5;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero{text-align:center;padding:0 24px 18px}
+.kicker{font:700 10px/1.5 system-ui,sans-serif;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(24px,6vw,30px);line-height:1.4;letter-spacing:-.03em;margin:9px 0 9px;font-weight:900}
+.intro{font-size:13px;line-height:1.9;color:#bdb0bf;margin:0 auto;max-width:385px}
+.rule{height:1px;background:linear-gradient(90deg,transparent,#a33c565c,transparent);margin:0 22px}
+.content{padding:21px 24px 24px}
+.label{font-size:13px;font-weight:800;display:block;margin:0 0 9px;color:#f3dce4}
+.access-wrap{position:relative}
+.access{display:block;width:100%;min-height:54px;text-align:center;direction:ltr;letter-spacing:.075em;font-weight:700;font-size:16px;border-radius:12px;border:1px solid #694052;background:#090b13;color:#f7edf4;padding:14px 12px;outline:none;transition:border .2s,box-shadow .2s}
+.access::placeholder{font-size:13px;font-weight:400;letter-spacing:.04em;color:#6e6675}
+.access:focus{border-color:#ff456b;box-shadow:0 0 0 3px #fa365924}
+.hint{font-size:11px;margin:8px 1px 0;color:#8f8192;line-height:1.7}
+.action{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:53px;margin-top:18px;border-radius:12px;border:1px solid #ff789849;background:linear-gradient(105deg,#9e1d3d,#dd264c 62%,#a21f44);box-shadow:0 14px 35px #9f193a40,inset 0 1px #ffb1c052;color:#fff;font-size:14px;font-weight:900;cursor:pointer;transition:transform .17s,filter .17s}
+.action:not(:disabled):active{transform:scale(.985)}.action:not(:disabled):hover{filter:brightness(1.13)}.action:disabled{opacity:.6;cursor:wait}
+.action svg{width:18px;height:18px}
+.notice{min-height:0;font-size:12px;line-height:1.8;margin-top:10px;color:#cbb9c5}.notice:not(:empty){padding:10px 12px;border:1px solid #743c4b;border-radius:9px;background:#2c1422}.notice.ok{color:#bbf3d1;border-color:#397358;background:#0d2b21}.notice.bad{color:#ffb5c3;animation:shake .35s ease}
+.next{margin-top:19px;border:1px solid #42564d;background:linear-gradient(135deg,#0a251c,#101b1c 80%);border-radius:15px;padding:17px;animation:rise .4s both}.next[hidden]{display:none}
+.step-mark{color:#aaf4d0;font:700 10px system-ui,sans-serif;letter-spacing:.13em;direction:ltr;text-align:left}.next h2{font-size:18px;margin:7px 0}.next p{color:#acc4b8;font-size:12px;line-height:1.8;margin:0 0 12px}
+.command{font:12px/1.8 monospace;word-break:break-all;direction:ltr;text-align:left;user-select:all;display:block;padding:12px;background:#050e0e;border:1px solid #375d4d;border-radius:10px;color:#bcffd8}
+.copy{width:100%;margin-top:10px;border:1px solid #436957;background:#173f30;color:#d5ffe6;border-radius:10px;padding:12px;font-size:13px;font-weight:800;cursor:pointer}
+.again{border:0;background:transparent;color:#bfddce;font-size:12px;text-decoration:underline;margin-top:12px;padding:5px;cursor:pointer}
+.bottom{border-top:1px solid #ffffff12;display:flex;justify-content:space-between;gap:10px;direction:ltr;padding:15px 23px;background:#0c0d15;color:#766e7d;font:700 9px system-ui,sans-serif;letter-spacing:.13em}
+.bottom strong{color:#cba3b0}
+@media(max-width:390px){.portal{border-radius:17px}.top,.content{padding-left:17px;padding-right:17px}.sigil{height:145px}.ring.one{height:119px;width:119px}.ring.two{height:95px;width:95px}.hero{padding:0 14px 16px}.access{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="ambience" aria-hidden="true"></div>
+<div class="shell">
+  <main class="portal">
+    <header class="top">
+      <div class="mark">AURORA<span> / </span>ACCESS</div>
+      <div class="status"><span class="lamp"></span>PRIVATE DOWNLOAD</div>
+    </header>
+    <div class="sigil" aria-hidden="true">
+      <div class="halo"></div><div class="ring one"></div><div class="ring two"></div>
+      <div class="lock"><svg viewBox="0 0 32 32"><rect x="7" y="14" width="18" height="14" rx="3"/><path d="M11 14V9a5 5 0 0 1 10 0v5"/><path d="M16 20v3"/></svg></div>
+    </div>
+    <section class="hero">
+      <div class="kicker">Restricted / Encrypted Package</div>
+      <h1>بوابة الوصول المشفّر</h1>
+      <p class="intro">ملف إعداد Redmi محميّ بالتشفير. أدخل رمز الوصول الصحيح لبدء التنزيل تلقائيًا وإظهار أمر Termux.</p>
+    </section>
+    <div class="rule"></div>
+    <section class="content">
+      <form id="f" autocomplete="off">
+        <label class="label" for="pin">رمز الوصول الخاص</label>
+        <div class="access-wrap"><input class="access" id="pin" type="text" autocapitalize="characters" inputmode="text" spellcheck="false" maxlength="34" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" required aria-describedby="hint"></div>
+        <div class="hint" id="hint">الرمز مكوّن من 20 حرفًا ورقمًا. يمكن كتابته مع الشرطات أو بدونها.</div>
+        <button class="action" id="btn" type="submit"><span id="btn-label">فتح التشفير وبدء التنزيل</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 17 5-5-5-5"/><path d="M12 17h6"/></svg></button>
+      </form>
+      <div class="notice" id="status" role="status" aria-live="polite"></div>
+      <section class="next" id="after" hidden aria-live="polite">
+        <div class="step-mark">STEP 02 / TERMUX</div>
+        <h2>الملف جاهز للتشغيل</h2>
+        <p>بدأ التنزيل تلقائيًا. تأكد أن الملف موجود في مجلد Download على Redmi، ثم افتح Termux والصق الأمر:</p>
+        <code id="command" class="command">sh ~/storage/downloads/Redmi_Remote_Setup.sh</code>
+        <button class="copy" id="copy" type="button">نسخ الأمر إلى الحافظة</button>
+        <button class="again" id="again" type="button">إعادة تنزيل الملف</button>
+      </section>
+    </section>
+    <footer class="bottom"><span>ENCRYPTED DELIVERY</span><strong>AUTHORIZED ACCESS ONLY</strong></footer>
+  </main>
+</div>
+<script>
 const PAYLOAD={s:"wmYGCDSRuj9zUq5/QL1SYA==",v:"SoIPKSOiZv1Qmu2p",c:"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"};
 const el=id=>document.getElementById(id);
 const bytes=s=>Uint8Array.from(atob(s),x=>x.charCodeAt(0));
+const command="sh ~/storage/downloads/Redmi_Remote_Setup.sh";
+let downloaded=null;
+function downloadNow(){
+ if(!downloaded)return;
+ const url=URL.createObjectURL(downloaded);
+ const a=document.createElement("a");
+ a.href=url;a.download="Redmi_Remote_Setup.sh";
+ document.body.append(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),15000);
+}
+function message(text,kind){
+ el("status").textContent=text;
+ el("status").className="notice"+(kind?" "+kind:"");
+}
 el("f").addEventListener("submit",async e=>{
  e.preventDefault();
- const code=el("pin").value.replace(/[\s-]/g,"").toUpperCase(),status=el("status"),btn=el("btn");
- status.textContent="";status.className="notice";
- if(!/^[A-HJ-NP-Z2-9]{20}$/.test(code)){status.textContent="اكتب الرمز الكامل المكوّن من 20 حرفًا ورقمًا.";status.classList.add("bad");return}
- btn.disabled=true;btn.textContent="جارٍ التحقق وفك التشفير...";
+ const code=el("pin").value.replace(/[\s-]/g,"").toUpperCase();
+ if(!/^[A-HJ-NP-Z2-9]{20}$/.test(code)){message("الرمز غير مكتمل. تأكد من كتابة الأحرف والأرقام العشرين.","bad");return}
+ const btn=el("btn");btn.disabled=true;el("btn-label").textContent="جارٍ التحقق وفك التشفير...";
+ message("يتم التحقق من رمز الوصول...");
  try{
   if(!globalThis.crypto?.subtle||typeof DecompressionStream==="undefined")throw new Error("browser");
   const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(code),{name:"PBKDF2"},false,["deriveKey"]);
   const key=await crypto.subtle.deriveKey({name:"PBKDF2",salt:bytes(PAYLOAD.s),iterations:600000,hash:"SHA-256"},material,{name:"AES-GCM",length:256},false,["decrypt"]);
-  const data=await crypto.subtle.decrypt({name:"AES-GCM",iv:bytes(PAYLOAD.v)},key,bytes(PAYLOAD.c));
-  const unzipped=await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
-  const link=document.createElement("a"),url=URL.createObjectURL(new Blob([unzipped],{type:"application/octet-stream"}));
-  link.href=url;link.download="Redmi_Remote_Setup.sh";document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),15000);
-  status.textContent="تم فك تشفير الملف وبدأ التنزيل. راجع مجلد التنزيلات.";status.classList.add("ok");el("after").hidden=false;el("pin").value="";
- }catch(err){status.textContent=err.message==="browser"?"المتصفح لا يدعم فك التشفير؛ افتح الرابط في Chrome.":"الرمز غير صحيح. تأكد من الأحرف والأرقام ثم أعد المحاولة.";status.classList.add("bad")}
- finally{btn.disabled=false;btn.textContent="فتح الملف وتنزيله"}
+  const plain=await crypto.subtle.decrypt({name:"AES-GCM",iv:bytes(PAYLOAD.v)},key,bytes(PAYLOAD.c));
+  const file=await new Response(new Blob([plain]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+  downloaded=new Blob([file],{type:"application/octet-stream"});
+  el("pin").value="";
+  downloadNow();
+  el("after").hidden=false;
+  message("تم التحقق من الرمز بنجاح وبدأ تنزيل الملف تلقائيًا.","ok");
+  el("after").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"});
+ }catch(err){
+  message(err.message==="browser"?"هذا المتصفح لا يدعم فك التشفير. افتح الرابط في Chrome.":"رمز الوصول غير صحيح. حاول مرة أخرى.","bad");
+ }finally{
+  btn.disabled=false;el("btn-label").textContent="فتح التشفير وبدء التنزيل";
+ }
 });
-el("copy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText("sh ~/storage/downloads/Redmi_Remote_Setup.sh");el("copy").textContent="تم النسخ"}catch{el("copy").textContent="حدد النص في الأعلى لنسخه"}});
-</script></body></html>
+el("again").addEventListener("click",downloadNow);
+el("copy").addEventListener("click",async()=>{
+ let ok=false;
+ try{await navigator.clipboard.writeText(command);ok=true}
+ catch{
+   const temp=document.createElement("textarea");
+   temp.value=command;temp.style.position="fixed";temp.style.opacity="0";
+   document.body.appendChild(temp);temp.select();
+   try{ok=document.execCommand("copy")}catch{}
+   temp.remove();
+ }
+ const b=el("copy");b.textContent=ok?"تم نسخ الأمر ✓":"اضغط مطولًا على الأمر أعلاه لنسخه";
+ if(ok)setTimeout(()=>b.textContent="نسخ الأمر إلى الحافظة",2500);
+});
+</script>
+</body>
+</html>
